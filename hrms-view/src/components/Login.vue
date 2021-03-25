@@ -92,7 +92,7 @@
   justify-content: flex-end;
 }
 .login_container{
-  background-color: bisque;
+  /*background-color: bisque;*/
   height: 100%;
 }
 .login_box{
@@ -103,7 +103,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
-  border-radius: 30px;
+  border-radius: 10px;
 }
 .avatar_box{
   height: 130px;

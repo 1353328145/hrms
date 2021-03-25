@@ -44,6 +44,7 @@ public class CustomerRealm extends AuthorizingRealm {
             uid = Long.parseLong(principal);
             currentEmploy = service.getEmployByUid(uid);
         }catch (Exception e){
+            e.printStackTrace();
             return null;
         }
         return currentEmploy == null?null:new SimpleAuthenticationInfo(principal,currentEmploy.getPassword(),this.getName());

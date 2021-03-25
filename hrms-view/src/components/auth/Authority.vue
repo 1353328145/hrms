@@ -1,5 +1,5 @@
 <template>
-  <div style="height: 100%;width: 100%">
+  <el-row style="height: 100%;width: 100%">
         <el-row>
           <el-breadcrumb separator="/">
             <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
@@ -38,14 +38,71 @@
               <el-row>
                 <el-table
                   :data="userList"
-                  stripe
                   style="width: 100%">
+                  <el-table-column type="expand">
+                    <template slot-scope="props">
+                      <el-form label-position="left" inline class="demo-table-expand">
+                        <el-form-item label="性别">
+                          <span>{{ props.row.sex === 0?'男':'女' }}</span>
+                        </el-form-item>
+                        <el-form-item label="联系地址">
+                          <span>{{ props.row.address }}</span>
+                        </el-form-item>
+                        <el-form-item label="民族">
+                          <span>{{ props.row.national }}</span>
+                        </el-form-item>
+                        <el-form-item label="身份证号">
+                          <span>{{ props.row.idNumber }}</span>
+                        </el-form-item>
+                        <el-form-item label="最高学历">
+                          <span>{{ props.row.culture }}</span>
+                        </el-form-item>
+                        <el-form-item label="毕业学校">
+                          <span>{{ props.row.school }}</span>
+                        </el-form-item>
+                        <el-form-item label="email">
+                          <span>{{ props.row.email }}</span>
+                        </el-form-item>
+                        <el-form-item label="合同期限">
+                          <span>{{ props.row.contract }}</span>
+                        </el-form-item>
+                        <el-form-item label="生日">
+                          <span>{{ props.row.birthday }}</span>
+                        </el-form-item>
+                        <el-form-item label="聘用来源">
+                          <span>{{ props.row.employFrom }}</span>
+                        </el-form-item>
+                        <el-form-item label="角色职位名">
+                          <span>{{ props.row.role.roleName }}</span>
+                        </el-form-item>
+                        <el-form-item label="角色等级">
+                          <span>{{ props.row.role.roleVal }}</span>
+                        </el-form-item>
+                      </el-form>
+                    </template>
+                  </el-table-column>
                   <el-table-column
-                    prop="date"
-                    label="日期"
-                    width="180">
+                    label="工号"
+                    prop="uid">
+                  </el-table-column>
+                  <el-table-column
+                    label="姓名"
+                    prop="name">
+                  </el-table-column>
+                  <el-table-column
+                    label="电话"
+                    prop="phone">
                   </el-table-column>
                 </el-table>
+              </el-row>
+              <el-row>
+                <el-pagination
+                  @current-change="handleEmployChange"
+                  background
+                  layout="prev, pager, next"
+                  :total="employTable.total"
+                  :page-size="30">
+                </el-pagination>
               </el-row>
             </el-card>
           </el-col>
@@ -53,7 +110,7 @@
             3424
           </el-col>
         </el-row>
-  </div>
+  </el-row>
 </template>
 
 <script>
@@ -66,18 +123,28 @@ export default {
         name:'',
         roleId: -1
       },
-      userList:{
+      userList:[],
+      role:[],
+      employTable:{
+        total:0,
+        pageNum:1
+      }
 
-      },
-      role:[]
     }
   },
   methods:{
-    loadAllEmploy(){
-
+    handleEmployChange(num){
+      this.employTable.pageNum = num;
+      this.loadAllEmploy();
+    },
+    async loadAllEmploy() {
+      const res = await this.$http.get("authority/loadEmployForAuth",this.userQueryInfo);
+      // if (res.data.flag){
+      //   this.userList = res.data.extend.employs;
+      // }
     },
     async loadAllRole() {
-      const res = await this.$http.get("authority/loadAllRole")
+      const res = await this.$http.get("authority/loadAllRole");
       if (res.data.flag){
         this.role = res.data.extend.role
       }else {

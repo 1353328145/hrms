@@ -8,6 +8,7 @@ import project.hrms.start.entity.Employ;
 import project.hrms.start.mapper.EmployMapper;
 
 import java.util.Date;
+import java.util.List;
 
 @Service("employService")
 public class EmployService {
@@ -24,5 +25,9 @@ public class EmployService {
         employMapper.insert(employ);
         System.out.println(employ);
         return true;
+    }
+
+    public List<Employ> getEmployForAuth(Employ employ) {
+        return null;
     }
 }

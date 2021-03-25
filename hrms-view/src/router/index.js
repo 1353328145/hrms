@@ -37,15 +37,15 @@ router.beforeEach( (to,from,next) =>{
 export default router;
 //挂载路由导航
 
-// router.beforeEach(((to, from, next) => {
-//   //to从哪来 from到哪去
-//   if (to.path==='/login'){
-//       return next();
-//   }
-//   const token = window.sessionStorage.getItem("token");
-//   if (!token){
-//     return router.replace('/login');
-//   }else{
-//     return next();
-//   }
-// }));
+router.beforeEach(((to, from, next) => {
+  //to从哪来 from到哪去
+  if (to.path==='/login'){
+      return next();
+  }
+  const token = window.sessionStorage.getItem("token");
+  if (!token){
+    return router.replace('/login');
+  }else{
+    return next();
+  }
+}));
