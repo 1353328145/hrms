@@ -14,8 +14,7 @@ public class EmployMenu implements Serializable {
     @TableId(type = IdType.AUTO)
     private Integer mid;
     @TableId(type = IdType.AUTO)
-    private Integer uid;
-
+    private Long uid;
 
     public Integer getMid() {
         return mid;
@@ -25,11 +24,11 @@ public class EmployMenu implements Serializable {
         this.mid = mid;
     }
 
-    public Integer getUid() {
+    public Long getUid() {
         return uid;
     }
 
-    public void setUid(Integer uid) {
+    public void setUid(Long uid) {
         this.uid = uid;
     }
 

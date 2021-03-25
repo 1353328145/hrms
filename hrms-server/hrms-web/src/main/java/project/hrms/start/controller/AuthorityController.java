@@ -9,9 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import project.hrms.start.bo.Msg;
 import project.hrms.start.entity.Employ;
+import project.hrms.start.entity.Menu;
 import project.hrms.start.service.AuthorityService;
 import project.hrms.start.service.EmployService;
 import project.hrms.start.util.TokenUtil;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("authority")
@@ -55,8 +58,13 @@ public class AuthorityController {
         return flag?Msg.success():Msg.fail();
     }
 
-    @GetMapping("loadAllMenu")
-    public Msg loadAllMenu(){
-        return Msg.success().add("menus",authorityService.getAllMenu());
+    @GetMapping("loadAllMenu/{uid}")
+    public Msg loadAllMenu(@PathVariable("uid") Long uid){
+        List<Menu> res = authorityService.getMenuByUid(uid);
+        return  res == null || res.size() == 0 ? Msg.fail():Msg.success().add("menus",res);
+    }
+    @GetMapping("loadAllRole")
+    public Msg loadAllRole(){
+        return Msg.success().add("role",authorityService.getAllRole());
     }
 }

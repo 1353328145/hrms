@@ -20,18 +20,18 @@ public class TestAythority {
     public void test(){
         Employ employ = new Employ();
         employ.setPassword("mimashi123");
-        employ.setSex(0);
-        employ.setName("张三");
-        employ.setPhone("1234567891");
+        employ.setSex(1);
+        employ.setName("李四");
+        employ.setPhone("9876543211");
         employ.setAddress("安阳市文峰区");
-        employ.setNational("汉族");
-        employ.setIdNumber("xxxxxx20000101xxxx");
+        employ.setNational("回族");
+        employ.setIdNumber("xxxxxx20000202xxxx");
         employ.setCulture("本科");
         employ.setSchool("安阳工学院");
         employ.setEmail("123456@qq.com");
         employ.setContract(new Date());
         employ.setBirthday(new Date());
-        employ.setEmployFrom("校招");
+        employ.setEmployFrom("社招");
         System.out.println(service.save(employ));
     }
 }

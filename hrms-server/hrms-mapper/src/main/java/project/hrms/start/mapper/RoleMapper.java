@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 import project.hrms.start.entity.Role;
 @Repository
 public interface RoleMapper extends BaseMapper<Role> {
+    Role getRoleByRid(Integer rid);
 }

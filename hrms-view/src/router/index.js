@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Home from '../components/Home'
 import Login from  '../components/Login'
 import Main from "../components/main/Main";
+import Authority from '../components/auth/Authority'
+import store from '../store/store.js'
 Vue.use(Router);
 
 const router= new Router({
@@ -15,6 +17,7 @@ const router= new Router({
       redirect: '/home/main',
       children :[
         {path: '/home/main', component: Main},
+        {path: '/home/authority', component: Authority},
       ]
     }
   ]
@@ -25,7 +28,7 @@ router.beforeEach( (to,from,next) =>{
   //from去哪
   //next放行函数
   if (to.path==='/login'){return next();}
-  const token = window.sessionStorage.getItem("token");
+  const token = sessionStorage.getItem("token");
   if (!token) {
     return next('/login');
   }

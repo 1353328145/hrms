@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project.hrms.start.mapper.RoleMapper">
+
+    <resultMap type="project.hrms.start.entity.Role" id="RoleMap">
+        <id property="rid" column="rid" />
+        <result property="roleName" column="role_name" />
+        <result property="roleVal" column="role_val" />
+    </resultMap>
+    <select id="getRoleByRid" resultMap="RoleMap">
+        select * from role where rid = #{rid}
+    </select>
+</mapper>

@@ -15,7 +15,7 @@ public class EmployService {
     EmployMapper employMapper;
 
     public Employ getEmployByUid(Long uid){
-        return employMapper.selectOne(new QueryWrapper<Employ>().eq("uid",uid));
+        return employMapper.getOneByUid(uid);
     }
 
     public boolean save(Employ employ) {

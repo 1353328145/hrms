@@ -50,8 +50,8 @@
               if (valid){
                 const result=await this.$http.post('authority/login',this.form);
                 if (result.data.flag){
-                  window.sessionStorage.setItem("token",result.data.extend.token);
-                  window.sessionStorage.setItem("uid",result.data.extend.uid);
+                  sessionStorage.setItem("token",result.data.extend.token)
+                  sessionStorage.setItem("uid",result.data.extend.uid)
                   this.$router.push("/home");
                 }else{
                   this.$message({
@@ -67,7 +67,10 @@
               }
             });
           }
-        }
+        },
+      created() {
+          sessionStorage.clear();
+      }
     }
 </script>
 

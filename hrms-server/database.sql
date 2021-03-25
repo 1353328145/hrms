@@ -30,6 +30,9 @@ create table role(
     -- 2.管理员 , 根据系统管理员分配权限
     -- 3.系统管理员 ，无所不能
 );
+insert into role (`role_name`, `role_val`) VALUES ('后台系统管理员', 3);
+insert into role (`role_name`, `role_val`) VALUES ('管理员', 2);
+insert into role (`role_name`, `role_val`) VALUES ('普通员工', 1);
 -- 后台管理菜单表
 create table menu(
     mid int not null primary key auto_increment, -- id
@@ -47,11 +50,10 @@ insert into menu (`info`, `menu_path`, `icon`) VALUES ('角色与菜单管理', 
 insert into menu (`info`, `menu_path`, `icon`) VALUES ('首页公告管理', '/home/msg', 'el-icon-s-promotion');
 insert into menu (`info`, `menu_path`, `icon`) VALUES ('个人信息管理', '/home/info', 'el-icon-caret-right');
 
-
 -- 菜单-人员表
 create table employ_menu(
     mid int,
-    uid int,
+    uid bigint,
     primary key (mid,uid)
 );
 -- 部门表

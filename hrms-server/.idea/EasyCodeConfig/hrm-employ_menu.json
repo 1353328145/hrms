@@ -1,8 +1,8 @@
 {
   "name" : "EmployMenu",
-  "preName" : null,
+  "preName" : "",
   "comment" : null,
-  "templateGroupName" : null,
+  "templateGroupName" : "Default",
   "fullColumn" : [ {
     "name" : "mid",
     "comment" : null,
@@ -20,7 +20,7 @@
   } ],
   "pkColumn" : null,
   "otherColumn" : null,
-  "savePackageName" : "",
-  "savePath" : "./hrms-model/src/main/java/project/hrms/start",
-  "saveModelName" : "hrms-web"
+  "savePackageName" : "project.hrms.start",
+  "savePath" : "./hrms-mapper/src/main/java/project/hrms/start",
+  "saveModelName" : "hrms-mapper"
 }

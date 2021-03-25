@@ -5,7 +5,10 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 import project.hrms.start.entity.Menu;
 
+import java.util.List;
+
 @Repository
 
 public interface MenuMapper extends BaseMapper<Menu> {
+    List<Menu> getMenuByUid(Long uid);
 }

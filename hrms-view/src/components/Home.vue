@@ -7,7 +7,6 @@
           </div>
           <div>
           </div>
-
         </el-header>
         <el-container>
           <el-aside width="200px" class="home-aside">
@@ -47,12 +46,21 @@
           }
         },
         async loadMenu() {
-          const res = await this.$http.get("authority/loadAllMenu");
-          if (res.data.flag){
-            this.menu = res.data.extend.menus;
+          let localMenus = sessionStorage.getItem("menu");
+          let uid = sessionStorage.getItem("uid");
+          if (!localMenus){
+            const res = await this.$http.get("authority/loadAllMenu/"+uid);
+            window.sessionStorage.setItem("menu",JSON.stringify(res.data.extend.menus));
+            if (res.data.flag){
+              this.menu = res.data.extend.menus;
+            }else{
+              this.$message.warning("您还没有被分配任何权限,请联系管理员处理");
+              this.$router.push("/login")
+            }
           }else{
-            this.$message.error("请检查网络设置");
+            this.menu = JSON.parse(localMenus);
           }
+
         },
         logout : function (){
         }

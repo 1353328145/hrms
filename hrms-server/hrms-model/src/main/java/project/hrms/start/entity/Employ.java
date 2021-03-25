@@ -50,6 +50,15 @@ public class Employ implements Serializable {
 
     private Date createTime;
 
+    private Role role;
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 
     public Long getUid() {
         return uid;

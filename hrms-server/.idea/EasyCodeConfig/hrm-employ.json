@@ -2,7 +2,7 @@
   "name" : "Employ",
   "preName" : "",
   "comment" : null,
-  "templateGroupName" : "MybatisPlus",
+  "templateGroupName" : "Default",
   "fullColumn" : [ {
     "name" : "uid",
     "comment" : null,
