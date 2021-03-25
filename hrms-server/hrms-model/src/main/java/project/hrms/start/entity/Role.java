@@ -1,6 +1,9 @@
 package project.hrms.start.entity;
 
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.io.Serializable;
 
 /**
@@ -9,7 +12,7 @@ import java.io.Serializable;
  */
 public class Role implements Serializable {
     private static final long serialVersionUID = 332920385841419947L;
-
+    @TableId(value = "rid", type = IdType.AUTO)
     private Integer rid;
 
     private String roleName;

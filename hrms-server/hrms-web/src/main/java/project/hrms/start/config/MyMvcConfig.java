@@ -22,10 +22,8 @@ import java.util.List;
 public class MyMvcConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        //注册TestInterceptor拦截器
         registry.addInterceptor(new TokenInterceptor()).addPathPatterns("/**")
                 .excludePathPatterns("/authority/**","/signin/**");//不拦截的路径
-
     }
 
 

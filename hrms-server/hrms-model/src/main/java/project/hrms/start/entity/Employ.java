@@ -1,6 +1,9 @@
 package project.hrms.start.entity;
 
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -10,7 +13,7 @@ import java.util.Date;
  */
 public class Employ implements Serializable {
     private static final long serialVersionUID = 962935093499091885L;
-
+    @TableId(value = "uid",type = IdType.ID_WORKER)
     private Long uid;
 
     private String password;
@@ -192,4 +195,27 @@ public class Employ implements Serializable {
         this.createTime = createTime;
     }
 
+    @Override
+    public String toString() {
+        return "Employ{" +
+                "uid=" + uid +
+                ", password='" + password + '\'' +
+                ", sex=" + sex +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", national='" + national + '\'' +
+                ", idNumber='" + idNumber + '\'' +
+                ", culture='" + culture + '\'' +
+                ", school='" + school + '\'' +
+                ", email='" + email + '\'' +
+                ", contract=" + contract +
+                ", departmentId=" + departmentId +
+                ", birthday=" + birthday +
+                ", employFrom='" + employFrom + '\'' +
+                ", roleId=" + roleId +
+                ", imgKey='" + imgKey + '\'' +
+                ", createTime=" + createTime +
+                '}';
+    }
 }

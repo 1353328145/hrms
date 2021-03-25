@@ -3,8 +3,8 @@ use hrm;
 -- 员工表
 create table employ(
     uid bigint primary key, -- 工号
-    password char (30), -- 密码
-    sex tinyint,  -- 性别
+    password char (100), -- 密码
+    sex tinyint,  -- 性别 0 男 1 女
     name char(10), -- 姓名
     phone char(20), -- 手机
     address char(30), -- 联系地址
@@ -34,8 +34,20 @@ create table role(
 create table menu(
     mid int not null primary key auto_increment, -- id
     info char (20), -- 菜单名称
-    menu_path char (30) -- 菜单路径
+    menu_path char (40), -- 菜单路径
+    icon char(50) -- 菜单icon
 );
+insert into menu (`info`, `menu_path`, `icon`) VALUES ('首页', '/home/main', 'el-icon-s-home');
+insert into menu (`info`, `menu_path`, `icon`) VALUES ('公司信息管理', '/home/info', 'el-icon-s-opportunity');
+insert into menu (`info`, `menu_path`, `icon`) VALUES ('组织架构管理', '/home/framework', 'el-icon-s-platform');
+insert into menu (`info`, `menu_path`, `icon`) VALUES ('考勤信息管理', '/home/attendance', 'el-icon-s-flag');
+insert into menu (`info`, `menu_path`, `icon`) VALUES ('权限管理', '/home/authority', 'el-icon-s-tools');
+insert into menu (`info`, `menu_path`, `icon`) VALUES ('用户管理', '/home/user', 'el-icon-user-solid');
+insert into menu (`info`, `menu_path`, `icon`) VALUES ('角色与菜单管理', '/home/role_menu', 'el-icon-menu');
+insert into menu (`info`, `menu_path`, `icon`) VALUES ('首页公告管理', '/home/msg', 'el-icon-s-promotion');
+insert into menu (`info`, `menu_path`, `icon`) VALUES ('个人信息管理', '/home/info', 'el-icon-caret-right');
+
+
 -- 菜单-人员表
 create table employ_menu(
     mid int,

@@ -9,7 +9,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import './assets/css/global.css'
 import store from '@/store/store.js'
 import Vuex from 'vuex'
-axios.defaults.baseURL='http://localhost';//请求根路径
+axios.defaults.baseURL='http://localhost:8080';//请求根路径
 Vue.prototype.$http=axios;
 Vue.config.productionTip = false;
 Vue.use(ElementUI);

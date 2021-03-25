@@ -16,7 +16,6 @@
             <el-button type="warning" @click="reset()">重置</el-button>
           </el-form-item>
         </el-form>
-
       </div>
     </div>
 </template>
@@ -27,8 +26,8 @@
         data(){
           return {
             form:{
-              uid :"",
-              password: ""
+              uid :"1374915376185331713",
+              password: "mimashi123"
             },
             rules:{
               uid: [
@@ -47,7 +46,26 @@
             this.$refs.loginFormRef.resetFields();
           },
           login:function (){
-
+            this.$refs.loginFormRef.validate(async (valid)=>{
+              if (valid){
+                const result=await this.$http.post('authority/login',this.form);
+                if (result.data.flag){
+                  window.sessionStorage.setItem("token",result.data.extend.token);
+                  window.sessionStorage.setItem("uid",result.data.extend.uid);
+                  this.$router.push("/home");
+                }else{
+                  this.$message({
+                    message: '账号或密码不正确',
+                    type: 'error'
+                  });
+                }
+              }else{
+                this.$message({
+                  message: '格式不正确',
+                  type: 'warning'
+                });
+              }
+            });
           }
         }
     }

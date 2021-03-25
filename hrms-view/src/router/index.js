@@ -19,6 +19,18 @@ const router= new Router({
     }
   ]
 });
+
+router.beforeEach( (to,from,next) =>{
+  //to从哪来
+  //from去哪
+  //next放行函数
+  if (to.path==='/login'){return next();}
+  const token = window.sessionStorage.getItem("token");
+  if (!token) {
+    return next('/login');
+  }
+  next();
+});
 export default router;
 //挂载路由导航
 

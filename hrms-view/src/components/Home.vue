@@ -6,37 +6,17 @@
             <span>人力资源后台管理系统</span>
           </div>
           <div>
-
-            <el-button type="info" @click="logout">退出</el-button>
           </div>
 
         </el-header>
         <el-container>
           <el-aside width="200px" class="home-aside">
             <el-button @click="openAndClose" style="width: 100%">{{ ocMsg }}</el-button>
-
             <el-menu default-active="1-4-1" class="el-menu-vertical-demo" :collapse="isCollapse" :router="true">
-              <el-menu-item index="/home/main">
-                <i class="el-icon-s-opportunity"></i>
-                <span slot="title">首页</span>
+              <el-menu-item v-for="item in menu" :index="item.menuPath">
+                <i :class="item.icon"></i>
+                <span slot="title">{{ item.info }}</span>
               </el-menu-item>
-              <el-submenu index="userCenter">
-                <template slot="title">
-                  <i class="el-icon-user"></i>
-                  <span slot="title">个人中心</span>
-                </template>
-                <el-submenu index="user">
-                  <span slot="title">用户</span>
-                  <el-menu-item index="/home/user_show">个人主页</el-menu-item>
-                  <el-menu-item index="/home/user_collection">收藏</el-menu-item>
-                  <el-menu-item index="/home/user_message">消息</el-menu-item>
-                </el-submenu>
-                <el-submenu index="goods">
-                  <span slot="title">我的商铺</span>
-                  <el-menu-item index="/goods/goods_info">上架详情</el-menu-item>
-                  <el-menu-item index="1-2-2">数据分析</el-menu-item>
-                </el-submenu>
-              </el-submenu>
             </el-menu>
           </el-aside>
           <el-main class="home-main">
@@ -53,7 +33,8 @@
           return {
             isLogin:false,
             isCollapse:false,
-            ocMsg:"关闭"
+            ocMsg:"关闭",
+            menu:[]
           }
         },
       methods:{
@@ -65,10 +46,19 @@
             this.ocMsg = '关闭';
           }
         },
+        async loadMenu() {
+          const res = await this.$http.get("authority/loadAllMenu");
+          if (res.data.flag){
+            this.menu = res.data.extend.menus;
+          }else{
+            this.$message.error("请检查网络设置");
+          }
+        },
         logout : function (){
         }
       },
       created() {
+          this.loadMenu();
       }
     }
 </script>
@@ -100,6 +90,8 @@
 }
 .home-aside{
   /*background-color: #6E9390;*/
+  background-color: #EAEDF1;
+
 }
 .home-main{
   background-color: #EAEDF1;

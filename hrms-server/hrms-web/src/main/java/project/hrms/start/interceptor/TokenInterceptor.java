@@ -25,7 +25,7 @@ public class TokenInterceptor implements HandlerInterceptor {
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json; charset=utf-8");
         try{
-            response.getWriter().append("{\"info\":\"token is wrong\",\"success\":false}");
+            response.getWriter().append("{\"msg\":\"token is wrong\",\"flag\":false}");
         }catch (Exception e){
             e.printStackTrace();
             response.sendError(500);
