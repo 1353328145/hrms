@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project.hrms.start.mapper.EmployMenuMapper">
+    <resultMap type="project.hrms.start.entity.EmployMenu" id="EmployMenuMap">
+        <id property="mid" column="mid"/>
+        <id property="uid" column="uid"/>
+    </resultMap>
+    <insert id="insert">
+        insert into employ_menu  ( uid , mid )  VALUES  (#{uid},#{mid} )
+    </insert>
+    <delete id="deleteByUidInt">
+        delete from employ_menu
+        where uid = #{uid}
+    </delete>
+</mapper>

@@ -44,4 +44,12 @@ public class Role implements Serializable {
         this.roleVal = roleVal;
     }
 
+    @Override
+    public String toString() {
+        return "Role{" +
+                "rid=" + rid +
+                ", roleName='" + roleName + '\'' +
+                ", roleVal=" + roleVal +
+                '}';
+    }
 }

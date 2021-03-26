@@ -10,4 +10,15 @@
     <select id="getRoleByRid" resultMap="RoleMap">
         select * from role where rid = #{rid}
     </select>
+    <select id="getAllByInfo" resultMap="RoleMap">
+        select * from role
+        <where>
+            <if test="roleName != null and roleName != ''">
+                and role_name like concat('%',#{roleName},'%')
+            </if>
+            <if test="roleVal != null and roleVal != '' and roleVal != -1">
+                and role_val = #{roleVal}
+            </if>
+        </where>
+    </select>
 </mapper>

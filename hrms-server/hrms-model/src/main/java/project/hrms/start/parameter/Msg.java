@@ -1,4 +1,4 @@
-package project.hrms.start.bo;
+package project.hrms.start.parameter;
 
 import java.io.Serializable;
 import java.util.HashMap;

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project.hrms.start.mapper.EmployMapper">
+
+    <resultMap type="project.hrms.start.entity.Employ" id="EmployMap">
+        <id property="uid" column="uid" />
+        <result property="password" column="password" />
+        <result property="sex" column="sex" />
+        <result property="name" column="name" />
+        <result property="phone" column="phone" />
+        <result property="address" column="address" />
+        <result property="national" column="national" />
+        <result property="idNumber" column="id_number" />
+        <result property="culture" column="culture" />
+        <result property="school" column="school" />
+        <result property="email" column="email" />
+        <result property="contract" column="contract" />
+        <result property="departmentId" column="department_id"/>
+        <result property="birthday" column="birthday" />
+        <result property="employFrom" column="employ_from"/>
+        <result property="roleId" column="role_id"/>
+        <result property="imgKey" column="img_key"/>
+        <result property="createTime" column="create_time"/>
+        <association property="role" javaType="project.hrms.start.entity.Role">
+            <id property="rid" column="rid"/>
+            <result property="roleName" column="role_name" />
+            <result property="roleVal" column="role_val" />
+        </association>
+    </resultMap>
+    <select id="getOneByUid" resultMap="EmployMap">
+        select e.*,r.role_name,r.role_val
+        from employ e
+            left join role r on e.role_id = r.rid
+        where uid = #{uid}
+    </select>
+    <select id="getAllByInfo" resultMap="EmployMap">
+        select e.*,r.role_name,r.role_val
+        from employ e
+                 left join role r on e.role_id = r.rid
+        <where>
+            <if test="uid != null">
+                and uid = #{uid}
+            </if>
+            <if test="phone != null and phone != ''">
+                and phone = #{phone}
+            </if>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+            <if test="roleId != null and roleId != -1">
+                and role_id = #{roleId}
+            </if>
+        </where>
+    </select>
+
+</mapper>

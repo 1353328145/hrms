@@ -22,35 +22,29 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2be4938-f5b2-43d5-b40b-132766b072f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_3_25_12_05__Default_Changelist_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/MenuMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/RoleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/EmployController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hrms-view/src/components/auth/Authority.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/EasyCodeConfig/hrm-employ.json" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EasyCodeConfig/hrm-employ.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/EasyCodeConfig/hrm-employ_menu.json" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EasyCodeConfig/hrm-employ_menu.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1cada23b-cd45-411e-a8f7-17d4b130a21e/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="b2be4938-f5b2-43d5-b40b-132766b072f3" name="Default Changelist" comment="权限模块开发">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/EmployMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/EmployMenuMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/parameter/MenuUpdate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/AuthorityServiceInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/EmployServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_3_25_12_05__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_3_25_12_05__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/EmployMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/EmployMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/EmployMenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/EmployMenuMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/MenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/MenuMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/RoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/Employ.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/Employ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/EmployMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/EmployMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/RoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/bo/Msg.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/parameter/Msg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/AuthorityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/AuthorityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/EmployService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/EmployService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/AuthorityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/AuthorityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-web/src/test/java/project/hrms/start/TestAythority.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-web/src/test/java/project/hrms/start/TestAythority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hrms-view/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../hrms-view/src/components/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/EmployController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/EmployController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/RouterController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../hrms-view/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../hrms-view/src/components/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hrms-view/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../hrms-view/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hrms-view/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../hrms-view/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hrms-view/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/../hrms-view/src/store/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hrms-view/src/components/auth/Authority.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../hrms-view/src/components/auth/Authority.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,8 +57,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -98,7 +92,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../codehome/class-manager" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -124,15 +118,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -186,8 +178,17 @@
       <updated>1616573252363</updated>
       <workItem from="1616573255589" duration="6981000" />
       <workItem from="1616584264276" duration="6511000" />
-      <workItem from="1616645022068" duration="15720000" />
+      <workItem from="1616645022068" duration="15821000" />
+      <workItem from="1616723452874" duration="19382000" />
     </task>
+    <task id="LOCAL-00001" summary="权限模块开发">
+      <created>1616673568997</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1616673568997</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +206,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="权限模块开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="权限模块开发" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="488" y="134" key="#Project_Structure" timestamp="1616589724587">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -214,66 +219,66 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="448" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1616650682555" />
-    <state x="765" y="196" key="#com.intellij.ide.util.MemberChooser" timestamp="1616651793189">
+    <state x="765" y="196" key="#com.intellij.ide.util.MemberChooser" timestamp="1616751834154">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="196" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1616651793189" />
+    <state x="765" y="196" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1616751834154" />
     <state x="690" y="295" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1616590196577">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="295" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1616590196577" />
-    <state x="1181" y="382" width="440" height="464" key="FileChooserDialogImpl" timestamp="1616592268631">
+    <state x="1181" y="382" width="440" height="464" key="FileChooserDialogImpl" timestamp="1616723994129">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1181" y="382" width="440" height="464" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1616592268631" />
-    <state width="1877" height="542" key="GridCell.Tab.0.bottom" timestamp="1616673044102">
+    <state x="1181" y="382" width="440" height="464" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1616723994129" />
+    <state width="1877" height="852" key="GridCell.Tab.0.bottom" timestamp="1616755043569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="542" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616673044102" />
-    <state width="1877" height="542" key="GridCell.Tab.0.center" timestamp="1616673044102">
+    <state width="1877" height="852" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616755043569" />
+    <state width="1877" height="852" key="GridCell.Tab.0.center" timestamp="1616755043569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="542" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616673044102" />
-    <state width="1877" height="542" key="GridCell.Tab.0.left" timestamp="1616673044102">
+    <state width="1877" height="852" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616755043569" />
+    <state width="1877" height="852" key="GridCell.Tab.0.left" timestamp="1616755043569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="542" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616673044102" />
-    <state width="1877" height="542" key="GridCell.Tab.0.right" timestamp="1616673044102">
+    <state width="1877" height="852" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616755043569" />
+    <state width="1877" height="852" key="GridCell.Tab.0.right" timestamp="1616755043569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="542" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616673044102" />
-    <state width="1877" height="542" key="GridCell.Tab.1.bottom" timestamp="1616673044102">
+    <state width="1877" height="852" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616755043569" />
+    <state width="1877" height="852" key="GridCell.Tab.1.bottom" timestamp="1616755043570">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="542" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616673044102" />
-    <state width="1877" height="542" key="GridCell.Tab.1.center" timestamp="1616673044102">
+    <state width="1877" height="852" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616755043570" />
+    <state width="1877" height="852" key="GridCell.Tab.1.center" timestamp="1616755043569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="542" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616673044102" />
-    <state width="1877" height="542" key="GridCell.Tab.1.left" timestamp="1616673044102">
+    <state width="1877" height="852" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616755043569" />
+    <state width="1877" height="852" key="GridCell.Tab.1.left" timestamp="1616755043569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="542" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616673044102" />
-    <state width="1877" height="542" key="GridCell.Tab.1.right" timestamp="1616673044102">
+    <state width="1877" height="852" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616755043569" />
+    <state width="1877" height="852" key="GridCell.Tab.1.right" timestamp="1616755043570">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="542" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616673044102" />
-    <state width="1877" height="525" key="GridCell.Tab.2.bottom" timestamp="1616668865862">
+    <state width="1877" height="852" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616755043570" />
+    <state width="1877" height="444" key="GridCell.Tab.2.bottom" timestamp="1616733712697">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="525" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616668865862" />
-    <state width="1877" height="525" key="GridCell.Tab.2.center" timestamp="1616668865861">
+    <state width="1877" height="444" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616733712697" />
+    <state width="1877" height="444" key="GridCell.Tab.2.center" timestamp="1616733712697">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="525" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616668865861" />
-    <state width="1877" height="525" key="GridCell.Tab.2.left" timestamp="1616668865861">
+    <state width="1877" height="444" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616733712697" />
+    <state width="1877" height="444" key="GridCell.Tab.2.left" timestamp="1616733712697">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="525" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616668865861" />
-    <state width="1877" height="525" key="GridCell.Tab.2.right" timestamp="1616668865861">
+    <state width="1877" height="444" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616733712697" />
+    <state width="1877" height="444" key="GridCell.Tab.2.right" timestamp="1616733712697">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="525" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616668865861" />
+    <state width="1877" height="444" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616733712697" />
     <state width="220" height="539" key="HiddenNamespacesPopup" timestamp="1616650692916">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -286,14 +291,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="278" y="187" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1616645217012" />
-    <state x="762" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1616645090103">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1616673575541">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="762" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1616645090103" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1616673575541" />
+    <state x="762" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1616723547222">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="762" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1616723547222" />
     <state x="731" y="308" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1616650618291">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="731" y="308" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1616650618291" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1616752566801">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616752566801" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

@@ -1,5 +1,7 @@
 package project.hrms.start.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
@@ -7,11 +9,15 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import project.hrms.start.bo.Msg;
+import project.hrms.start.parameter.MenuUpdate;
+import project.hrms.start.parameter.Msg;
 import project.hrms.start.entity.Employ;
 import project.hrms.start.entity.Menu;
+import project.hrms.start.entity.Role;
 import project.hrms.start.service.AuthorityService;
+import project.hrms.start.service.AuthorityServiceInterface;
 import project.hrms.start.service.EmployService;
+import project.hrms.start.service.EmployServiceInterface;
 import project.hrms.start.util.TokenUtil;
 
 import java.util.List;
@@ -20,10 +26,10 @@ import java.util.List;
 @RequestMapping("authority")
 public class AuthorityController {
     @Autowired
-    private EmployService employService;
+    private EmployServiceInterface employService;
 
     @Autowired
-    private AuthorityService authorityService;
+    private AuthorityServiceInterface authorityService;
     /**
      * 登录
       */
@@ -63,8 +69,44 @@ public class AuthorityController {
         List<Menu> res = authorityService.getMenuByUid(uid);
         return  res == null || res.size() == 0 ? Msg.fail():Msg.success().add("menus",res);
     }
+
     @GetMapping("loadAllRole")
     public Msg loadAllRole(){
         return Msg.success().add("role",authorityService.getAllRole());
+    }
+    @GetMapping("loadAllRoleByQueryInfo/{pageNum}")
+    public Msg loadAllRoleByQueryInfo(@PathVariable("pageNum") Integer pageNum, Role role){
+        if (pageNum==null){
+            pageNum=1;
+        }
+        PageHelper.startPage(pageNum,30);
+        //查询
+        List<Role> result = authorityService.getAllRoleByQueryInfo(role);
+        PageInfo<Role> pageInfo=new PageInfo<>(result);
+        int total = (int) pageInfo.getTotal();
+        return Msg.success()
+                .add("result",pageInfo.getList())
+                .add("total",total);
+    }
+
+    @GetMapping("loadMenuList")
+    public Msg loadMenuList(){
+        return Msg.success().add("menus",authorityService.getAllMenu());
+    }
+
+    @GetMapping("loadAllMenuDirect/{uid}")
+    public Msg loadMenuByUid(@PathVariable Long uid){
+        return Msg.success().add("menus_uid",authorityService.getMenuByUidDirect(uid));
+    }
+
+    @PutMapping("saveMenuByUid")
+    public Msg saveMenuByUid(@RequestBody MenuUpdate menus){
+        boolean b = false;
+        try {
+            b = authorityService.updateEmployAuthority(menus);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return b ?Msg.success():Msg.fail();
     }
 }

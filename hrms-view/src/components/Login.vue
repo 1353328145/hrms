@@ -92,7 +92,7 @@
   justify-content: flex-end;
 }
 .login_container{
-  /*background-color: bisque;*/
+  background-color: bisque;
   height: 100%;
 }
 .login_box{

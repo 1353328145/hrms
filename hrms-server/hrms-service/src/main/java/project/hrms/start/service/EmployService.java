@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service("employService")
-public class EmployService {
+public class EmployService implements EmployServiceInterface{
     @Autowired
     EmployMapper employMapper;
 
@@ -28,6 +28,6 @@ public class EmployService {
     }
 
     public List<Employ> getEmployForAuth(Employ employ) {
-        return null;
+        return employMapper.getAllByInfo(employ);
     }
 }
