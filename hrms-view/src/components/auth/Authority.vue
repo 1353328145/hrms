@@ -20,12 +20,12 @@
                         <el-form-item label="姓名">
                           <el-input v-model="userQueryInfo.name" placeholder="姓名" size="mini"></el-input>
                         </el-form-item><br>
-                        <el-form-item label="角色名称查找">
+                        <el-form-item label="按照角色查找">
                           <el-select v-model="userQueryInfo.roleId" filterable placeholder="请选择" size="mini">
                             <el-option
                               v-for="item in role"
                               :key="item.rid"
-                              :label="item.roleName"
+                              :label="item.roleName +'    '+ item.roleVal"
                               :value="item.rid">
                             </el-option>
                           </el-select>
@@ -73,10 +73,10 @@
                               <el-form-item label="聘用来源:">
                                 <span>{{ props.row.employFrom }}</span>
                               </el-form-item>
-                              <el-form-item label="角色职位名:">
+                              <el-form-item label="角色职位名:" v-if="props.row.role !== null">
                                 <span>{{ props.row.role.roleName }}</span>
                               </el-form-item>
-                              <el-form-item label="角色等级:">
+                              <el-form-item label="角色等级:" v-if="props.row.role !== null">
                                 <span>{{ props.row.role.roleVal }}</span>
                               </el-form-item>
                             </el-form>
@@ -85,12 +85,12 @@
                         <el-table-column
                           label="工号"
                           prop="uid"
-                          width="200">
+                          width="180">
                         </el-table-column>
                         <el-table-column
                           label="姓名"
                           prop="name"
-                          width="150">
+                          width="100">
                         </el-table-column>
                         <el-table-column
                           label="电话"
@@ -99,10 +99,10 @@
                         </el-table-column>
                         <el-table-column label="操作" width="180" >
                           <template slot-scope="scope">
-                            <el-button @click.native.prevent="" type="text" size="small">
+                            <el-button @click.native.prevent="bindingRole(scope.row)" type="text" size="small">
                               绑定角色
                             </el-button>
-                            <el-button @click.native.prevent="selectEmploy(scope.row)" type="text" size="small" v-if="scope.row.role.roleVal === 2">
+                            <el-button @click.native.prevent="selectEmploy(scope.row)" type="text" size="small" v-if="scope.row.role!=null && scope.row.role.roleVal === 2">
                               绑定权限
                             </el-button>
                           </template>
@@ -179,11 +179,11 @@
                   </el-form-item>
                 </el-form>
               </el-row>
-              <el-row>
-                <el-col :span="12">
+              <el-row :gutter="20">
+                <el-col :span="15">
                   <el-table
                     :data="roleList"
-                    height="520"
+                    height="470"
                     style="width: 100%">
                     <el-table-column
                       prop="roleName"
@@ -193,18 +193,18 @@
                     <el-table-column
                       prop="roleVal"
                       label="角色等级"
-                      width="180">
+                      width="100">
                     </el-table-column>
                     <el-table-column
                       label="操作">
                       <template slot-scope="scope">
                         <el-button
                           size="mini"
-                          @click="handleRoleEdit(scope.$index, scope.row)">编辑</el-button>
+                          @click="handleRoleEdit(scope.row)">编辑</el-button>
                         <el-button
                           size="mini"
                           type="danger"
-                          @click="handleRoleDelete(scope.$index, scope.row)">删除</el-button>
+                          @click="handleRoleDelete(scope.row)">删除</el-button>
                       </template>
                     </el-table-column>
                   </el-table>
@@ -220,11 +220,90 @@
                     </el-pagination>
                   </el-row>
                 </el-col>
-                <el-col :span="12"></el-col>
+                <el-col :span="9">
+                  <el-row>
+                    增加一个新的角色类型
+                  </el-row>
+                  <el-row style="margin-top: 10%">
+                    <el-form label-position="top" label-width="80px" :model="roleInsert">
+                      <el-form-item label="角色名称/职位">
+                        <el-input v-model="roleInsert.roleName"></el-input>
+                      </el-form-item>
+                      <el-form-item label="角色权限等级">
+                        <el-select v-model="roleInsert.roleVal" filterable placeholder="请选择">
+                          <el-option
+                            v-for="item in roleValList2"
+                            :key="item.id"
+                            :label="item.val"
+                            :value="item.id">
+                          </el-option>
+                        </el-select>
+                      </el-form-item>
+                      <el-form-item>
+                        <el-button type="primary" @click="insertRole">保存这个角色类型</el-button>
+                      </el-form-item>
+                    </el-form>
+                  </el-row>
+                </el-col>
               </el-row>
             </el-tab-pane>
           </el-tabs>
         </el-row>
+
+    <el-dialog
+      title="修改信息"
+      :visible.sync="dialog"
+      width="30%"
+      :before-close="handleClose">
+      <span>
+         <el-row>
+                    <el-form label-position="top" label-width="80px" :model="roleUpdate">
+                      <el-form-item label="角色名称/职位">
+                        <el-input v-model="roleUpdate.roleName"></el-input>
+                      </el-form-item>
+                      <el-form-item label="角色权限等级">
+                        <el-select v-model="roleUpdate.roleVal" filterable placeholder="请选择">
+                          <el-option
+                            v-for="item in roleValList2"
+                            :key="item.id"
+                            :label="item.val"
+                            :value="item.id">
+                          </el-option>
+                        </el-select>
+                      </el-form-item>
+                    </el-form>
+                  </el-row>
+      </span>
+      <span slot="footer" class="dialog-footer">
+    <el-button @click="dialog = false">取 消</el-button>
+    <el-button type="primary" @click="updateRole">保 存</el-button>
+  </span>
+    </el-dialog>
+    <el-dialog
+      title="角色绑定"
+      :visible.sync="roleDialog"
+      width="30%"
+      :before-close="roleDialogHandleClose">
+      <span>
+                    <el-form label-position="top" label-width="80px" :model="binding_role">
+                      <el-form-item label="角色绑定">
+                        <el-select v-model="binding_role.roleId" filterable placeholder="请选择">
+                          <el-option
+                            v-for="item in role"
+                            :key="item.rid"
+                            :label="item.roleName + '    ' + item.roleVal"
+                            :value="item.rid">
+                          </el-option>
+                        </el-select>
+                      </el-form-item>
+                    </el-form>
+      </span>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="roleDialog = false">取 消</el-button>
+        <el-button type="primary" @click="saveRoleId">保 存</el-button>
+      </span>
+    </el-dialog>
+
   </el-row>
 </template>
 
@@ -233,6 +312,12 @@ export default {
   name: "Authority",
   data(){
     return {
+      roleDialog:false,
+      dialog:false,
+      binding_role:{
+        uid:'',
+        roleId:''
+      },
       menuList:[
       ],
       resMenuList:[
@@ -247,11 +332,25 @@ export default {
         roleName:'',
         roleVal:''
       },
+      roleUpdate:{
+        rid:'',
+        roleName:'',
+        roleVal:''
+      },
+      roleInsert:{
+        roleName:'',
+        roleVal: ''
+      },
       userList:[],
       role:[],
       roleList:[],
       roleValList:[
         {id:-1,val:'空'},
+        {id:1,val:'1'},
+        {id:2,val:'2'},
+        {id:3,val:'3'}
+      ],
+      roleValList2:[
         {id:1,val:'1'},
         {id:2,val:'2'},
         {id:3,val:'3'}
@@ -267,8 +366,51 @@ export default {
       currentEmploy:{},
       isSelected:false
     }
+
   },
   methods:{
+    /**
+     * 角色绑定
+     */
+    saveRoleId(){
+      this.$confirm('该操作可能会改变员工角色类型, 是否继续?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        this.$http.put("authority/roleChange",this.binding_role).then(res =>{
+          if (res.data.flag){
+            this.$message.success("修改成功");
+            this.employTable.pageNum = 1;
+            this.loadAllEmploy();
+            this.roleDialog = false;
+          } else{
+            this.$message.success("修改失败");
+          }
+        })
+      }).catch(() => {
+        this.$message({
+          type: 'info',
+          message: '已取消'
+        });
+      });
+    },
+    roleDialogHandleClose(done){
+      this.binding_role.roleId = '';
+      this.binding_role.uid ='';
+      done();
+    },
+    bindingRole(data){
+      this.binding_role.uid = data.uid;
+      this.binding_role.roleId = data.roleId;
+      this.loadAllRole();
+      this.roleDialog = true;
+    },
+    handleClose(done){
+      this.roleUpdate.roleName='';
+      this.roleUpdate.roleVal ='';
+      done();
+    },
     //角色
     onSubmitRole(){
       this.roleTable.pageNum = 1;
@@ -289,17 +431,31 @@ export default {
         this.$message.warning("请检查网络连接");
       }
     },
-    handleRoleEdit(){},
-    handleRoleDelete(){
+    handleRoleEdit(data){
+      this.roleUpdate.rid = data.rid;
+      this.roleUpdate.roleName = data.roleName;
+      this.roleUpdate.roleVal = data.roleVal;
+      this.dialog = true;
+    },
+    handleRoleDelete(data){
       this.$confirm('将永久删除该角色类型, 是否继续?', '提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         type: 'warning'
       }).then(() => {
-
-        this.$message({
-          type: 'success',
-          message: '删除成功!'
+        this.$http.delete("authority/role/"+data.rid).then(res=>{
+          if (res.data.flag){
+            this.loadAllRoleByInfo();
+            this.$message({
+              type: 'success',
+              message: '删除成功!'
+            });
+          }else{
+            this.$message({
+              type: 'error',
+              message: '删除失败!请检查是否还有员工绑定该角色类型'
+            });
+          }
         });
       }).catch(() => {
         this.$message({
@@ -307,6 +463,50 @@ export default {
           message: '已取消删除'
         });
       });
+    },
+    insertRole(){
+        if (!this.roleInsert.roleVal||!this.roleInsert.roleName){
+          this.$message.warning("请完善表单数据!");
+          return;
+        }
+      this.$confirm('将保存该角色类型, 是否继续?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        this.$http.post("authority/role",this.roleInsert).then(res=>{
+          if (res.data.flag){
+            this.loadAllRoleByInfo();
+            this.roleInsert.roleName="";
+            this.roleInsert.roleVal ="";
+            this.$message({
+              type: 'success',
+              message: '保存成功'
+            });
+          } else{
+            this.$message({
+              type: 'error',
+              message: '保存失败'
+            });
+          }
+        });
+      }).catch(() => {
+        this.$message({
+          type: 'info',
+          message: '已取消保存'
+        });
+      });
+    },
+    updateRole(){
+      this.$http.put("authority/role",this.roleUpdate).then(res=>{
+        if (res.data.flag){
+          this.loadAllRoleByInfo();
+          this.$message.success("修改成功");
+          this.dialog = false;
+        } else {
+          this.$message.error("修改失败");
+        }
+      })
     },
     help(){
       this.$notify.info({
@@ -331,7 +531,7 @@ export default {
         uid:this.userQueryInfo.uid,
         name:this.userQueryInfo.name,
         roleId: !roleId || roleId === ''?-1:roleId
-      }
+      };
       const res = await this.$http.get("employ/loadEmployForAuth/"+this.employTable.pageNum,{
         params:query
       });
@@ -346,8 +546,8 @@ export default {
       const res = await this.$http.get("authority/loadAllRole");
       if (res.data.flag){
         this.role =[
-          {rid:-1,roleName:'空',roleVal:0}
-        ]
+          {rid:-1,roleName:'空',roleVal:''}
+        ];
         for (let i =0;i < res.data.extend.role.length; i++)
         this.role.push(res.data.extend.role[i])
       }else {
@@ -386,7 +586,7 @@ export default {
       let that =this;
       this.menuList.forEach(function(item, index, arr) {
         if(item.mid === target) {
-          that.resMenuList.push(item)
+          that.resMenuList.push(item);
           arr.splice(index, 1)
         }
       });
@@ -429,7 +629,7 @@ export default {
 
 <style scoped>
 .left{
-  height: 600px;
+  height: 550px;
 }
 .content{
   margin-top: 20px;

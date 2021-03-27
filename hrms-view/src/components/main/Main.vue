@@ -1,12 +1,17 @@
 <template>
   <div>
-    hello
+    <div id="left" style="height: 500px;width: 500px">
+
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Main"
+  name: "Main",
+  methods:{
+
+  },
 }
 </script>
 

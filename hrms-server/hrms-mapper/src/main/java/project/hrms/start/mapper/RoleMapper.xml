@@ -7,6 +7,18 @@
         <result property="roleName" column="role_name" />
         <result property="roleVal" column="role_val" />
     </resultMap>
+    <update id="update">
+        UPDATE role
+        <set>
+            <if test="roleName != null and roleName != ''">
+                role_name = #{roleName},
+            </if>
+            <if test="roleVal != null and roleVal != ''">
+                role_val = #{roleVal},
+            </if>
+        </set>
+        where rid = #{rid}
+    </update>
     <select id="getRoleByRid" resultMap="RoleMap">
         select * from role where rid = #{rid}
     </select>

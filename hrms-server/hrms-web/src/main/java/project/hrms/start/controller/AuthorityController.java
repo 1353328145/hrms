@@ -109,4 +109,26 @@ public class AuthorityController {
         }
         return b ?Msg.success():Msg.fail();
     }
+
+    @DeleteMapping("role/{rid}")
+    public Msg deleteRoleByRid(@PathVariable("rid") Integer rid){
+        return authorityService.deleteRoleById(rid)?Msg.success():Msg.fail();
+    }
+
+    @PostMapping("role")
+    public Msg addRoleBy(@RequestBody Role role){
+        if (role.getRoleName() ==null|| role.getRoleVal() ==null){return Msg.fail();}
+        return authorityService.addRole(role)?Msg.success():Msg.fail();
+    }
+    @PutMapping("role")
+    public Msg updateRoleBy(@RequestBody Role role){
+        return authorityService.update(role)?Msg.success():Msg.fail();
+    }
+    @PutMapping("roleChange")
+    public Msg roleChange(@RequestBody Employ employ){
+        Long uid = employ.getUid();
+        Integer roleId = employ.getRoleId();
+        if (uid ==null || roleId ==null){return Msg.fail();}
+        return authorityService.updateEmployRole(uid,roleId)?Msg.success():Msg.fail();
+    }
 }

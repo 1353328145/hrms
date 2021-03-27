@@ -9,8 +9,14 @@ import java.util.List;
 public interface AuthorityServiceInterface {
      List<Menu> getAllMenu();
      List<Menu> getMenuByUid(Long uid);
+     List<Menu> getMenuByUidDirect(Long uid);
+
      List<Role> getAllRole();
      List<Role> getAllRoleByQueryInfo(Role role);
-     List<Menu> getMenuByUidDirect(Long uid);
+     boolean deleteRoleById(Integer rid);
+     boolean addRole(Role role);
+     boolean update(Role role);
+
      boolean updateEmployAuthority(MenuUpdate menuUpdate);
+     boolean updateEmployRole(Long uid,Integer rid);
 }

@@ -61,8 +61,21 @@ create table department(
     did int not null primary key auto_increment, -- 部门id
     name char (20), --  部门名称
     admin_employ bigint, -- 管理员
-    description char (200) -- 部门职能描述
+    description char (200), -- 部门职能描述
+    pdid int -- 父部门id
 );
+insert into department (`name`, `admin_employ`, `description`, `pdid`) VALUES ('财务部', NULL, '财务', NULL);
+insert into department (`name`, `admin_employ`, `description`, `pdid`) VALUES ('业务部', NULL, '业务', NULL);
+insert into department (`name`, `admin_employ`, `description`, `pdid`) VALUES ('行政部', NULL, '行政', NULL);
+insert into department (`name`, `admin_employ`, `description`, `pdid`) VALUES ('研发部', NULL, '研发', 2);
+insert into department (`name`, `admin_employ`, `description`, `pdid`) VALUES ('策划部', NULL, '策划', 2);
+insert into department (`name`, `admin_employ`, `description`, `pdid`) VALUES ('设计部', NULL, '设计', 2);
+insert into department (`name`, `admin_employ`, `description`, `pdid`) VALUES ('平面设计部', NULL, '平面设计', 6);
+insert into department (`name`, `admin_employ`, `description`, `pdid`) VALUES ('3D设计部', NULL, '3D设计', 6);
+insert into department (`name`, `admin_employ`, `description`, `pdid`) VALUES ('人力资源部', NULL, '人力资源', 3);
+insert into department (`name`, `admin_employ`, `description`, `pdid`) VALUES ('售后部', NULL, '售后', 3);
+
+
 -- 打卡表
 create table sign(
     sid bigint primary key, -- 打卡id

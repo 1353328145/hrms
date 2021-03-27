@@ -23,7 +23,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new TokenInterceptor()).addPathPatterns("/**")
-                .excludePathPatterns("/authority/**","/signin/**");//不拦截的路径
+                .excludePathPatterns("/authority/login","/signin/**");//不拦截的路径
     }
 
 

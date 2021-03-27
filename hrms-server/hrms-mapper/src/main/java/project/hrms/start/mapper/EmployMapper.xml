@@ -26,7 +26,28 @@
             <result property="roleName" column="role_name" />
             <result property="roleVal" column="role_val" />
         </association>
+        <association property="department" javaType="project.hrms.start.entity.Department">
+            <id property="did" column="did" />
+            <result property="name" column="name" />
+            <result property="adminEmploy" column="admin_employ" />
+            <result property="description" column="description" />
+            <result property="pdid" column="pdid"/>
+        </association>
     </resultMap>
+    <update id="updateRoleId">
+        UPDATE employ
+        <set>
+            <if test="rid != null">
+                role_id = #{rid},
+            </if>
+        </set>
+        where uid = #{uid}
+    </update>
+    <update id="setDepartmentToNullByDid">
+        UPDATE employ
+        set department_id = null
+        where department_id = #{did}
+    </update>
     <select id="getOneByUid" resultMap="EmployMap">
         select e.*,r.role_name,r.role_val
         from employ e
@@ -52,5 +73,15 @@
             </if>
         </where>
     </select>
+    <select id="getNumberByRid" resultType="java.lang.Integer">
+        select count(*) from employ
+        where role_id = #{rid}
+    </select>
 
+    <select id="getCountGroupByDid" resultType="project.hrms.start.parameter.ChartData">
+        select department.name , count(*) value from employ
+        left join department
+          on employ.department_id = department.did
+        GROUP BY department_id
+    </select>
 </mapper>

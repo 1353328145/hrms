@@ -31,4 +31,23 @@ public class EmployController {
                 .add("result",pageInfo.getList())
                 .add("total",total);
     }
+
+    @GetMapping("uidTest/{uid}")
+    public Msg uidTest(@PathVariable("uid")String s){
+        Long uid ;
+        try {
+            uid = Long.parseLong(s);
+        }catch (Exception e){
+            return Msg.fail();
+        }
+        Employ employ =employService.getEmployByUid(uid);
+        return employ == null?Msg.fail():Msg.success().add("name",employ.getName());
+    }
+
+    @GetMapping("findByUid/{uid}")
+    public Msg uidTest(@PathVariable("uid")Long uid){
+        Employ employ =employService.getEmployByUid(uid);
+            return employ == null?Msg.fail():Msg.success().add("employ",employ);
+    }
+
 }

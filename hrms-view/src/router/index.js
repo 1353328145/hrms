@@ -4,7 +4,7 @@ import Home from '../components/Home'
 import Login from  '../components/Login'
 import Main from "../components/main/Main";
 import Authority from '../components/auth/Authority'
-import store from '../store/store.js'
+import Info from  '../components/info/Info'
 Vue.use(Router);
 
 const router= new Router({
@@ -18,6 +18,7 @@ const router= new Router({
       children :[
         {path: '/home/main', component: Main},
         {path: '/home/authority', component: Authority},
+        {path: '/home/info', component: Info},
       ]
     }
   ]

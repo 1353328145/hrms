@@ -12,4 +12,6 @@ public interface EmployServiceInterface {
     boolean save(Employ employ);
 
     List<Employ> getEmployForAuth(Employ employ);
+
+    int getCount();
 }

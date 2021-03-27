@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project.hrms.start.mapper.DepartmentMapper">
+
+    <resultMap id="BaseResultMap" type="project.hrms.start.entity.Department">
+        <id property="did" column="did" />
+        <result property="name" column="name" />
+        <result property="adminEmploy" column="admin_employ" />
+        <result property="description" column="description" />
+        <result property="pdid" column="pdid" />
+    </resultMap>
+    <select id="getDepartmentByInfo" resultMap="BaseResultMap">
+        select * from department
+        <where>
+            <if test="name != null and name != ''">
+                and name like concat('%',#{name},'%')
+            </if>
+            <if test="adminEmploy != null">
+                and admin_employ like concat('%',#{adminEmploy},'%')
+            </if>
+        </where>
+    </select>
+
+
+</mapper>

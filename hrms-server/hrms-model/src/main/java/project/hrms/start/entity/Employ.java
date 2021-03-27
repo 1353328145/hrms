@@ -52,6 +52,16 @@ public class Employ implements Serializable {
 
     private Role role;
 
+    private Department department;
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
     public Role getRole() {
         return role;
     }

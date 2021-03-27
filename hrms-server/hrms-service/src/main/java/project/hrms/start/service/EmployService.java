@@ -30,4 +30,9 @@ public class EmployService implements EmployServiceInterface{
     public List<Employ> getEmployForAuth(Employ employ) {
         return employMapper.getAllByInfo(employ);
     }
+
+    @Override
+    public int getCount() {
+        return employMapper.selectCount(null);
+    }
 }
