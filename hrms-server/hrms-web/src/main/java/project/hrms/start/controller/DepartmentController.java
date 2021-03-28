@@ -64,4 +64,9 @@ public class DepartmentController {
     public Msg getDpCount(){
         return Msg.success().add("dpCount",departmentService.getCount()).add("emCount",employServiceInterface.getCount());
     }
+
+    @GetMapping("getTree")
+    public Msg getTree(){
+        return Msg.success().add("tree",departmentService.getAllWithTree());
+    }
 }

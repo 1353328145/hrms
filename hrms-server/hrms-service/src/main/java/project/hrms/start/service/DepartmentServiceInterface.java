@@ -3,6 +3,7 @@ package project.hrms.start.service;
 import project.hrms.start.entity.Department;
 import project.hrms.start.parameter.ChartData;
 import project.hrms.start.parameter.Msg;
+import project.hrms.start.parameter.TreeNode;
 
 import java.util.List;
 import java.util.Map;
@@ -18,4 +19,6 @@ public interface DepartmentServiceInterface {
     int getCount();
 
     List<Department> getAll();
+
+    List<TreeNode> getAllWithTree();
 }

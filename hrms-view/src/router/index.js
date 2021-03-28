@@ -6,6 +6,7 @@ import Main from "../components/main/Main";
 import Authority from '../components/auth/Authority'
 import Info from  '../components/info/Info'
 import Employ from "../components/employ/Employ";
+import Framework from '../components/framework/Framework'
 Vue.use(Router);
 
 const router= new Router({
@@ -21,6 +22,7 @@ const router= new Router({
         {path: '/home/authority', component: Authority},
         {path: '/home/info', component: Info},
         {path: '/home/user', component: Employ},
+        {path: '/home/framework', component: Framework},
       ]
     }
   ]

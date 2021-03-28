@@ -53,7 +53,7 @@ public class EmployController {
     }
 
     @GetMapping("findByUid/{uid}")
-    public Msg uidTest(@PathVariable("uid")Long uid){
+    public Msg findByUid(@PathVariable("uid")Long uid){
         Employ employ =employService.getEmployByUid(uid);
             return employ == null?Msg.fail():Msg.success().add("employ",employ);
     }
