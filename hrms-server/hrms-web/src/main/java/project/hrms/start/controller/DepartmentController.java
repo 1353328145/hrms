@@ -36,6 +36,10 @@ public class DepartmentController {
                 .add("total",total);
     }
 
+    @GetMapping("all")
+    public Msg getAllDp(){
+        return Msg.success().add("dp",departmentService.getAll());
+    }
     @PostMapping("dp")
     public Msg insertDp(@RequestBody Department department){
         return departmentService.insert(department)?Msg.success():Msg.fail();
@@ -55,6 +59,7 @@ public class DepartmentController {
     public Msg employInfo(){
         return Msg.success().add("info",departmentService.getEmployInfoByDp());
     }
+
     @GetMapping("getDpCount")
     public Msg getDpCount(){
         return Msg.success().add("dpCount",departmentService.getCount()).add("emCount",employServiceInterface.getCount());

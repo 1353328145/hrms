@@ -54,14 +54,14 @@ public class AuthorityController {
 
     @PostMapping("register")
     public Msg register(@RequestBody Employ employ){
-        boolean flag;
+        Long uid;
         try {
-            flag = employService.save(employ);
+            uid = employService.save(employ);
         }catch (Exception e){
             e.printStackTrace();
             return Msg.fail();
         }
-        return flag?Msg.success():Msg.fail();
+        return uid != null?Msg.success().add("uid",uid):Msg.fail();
     }
 
     @GetMapping("loadAllMenu/{uid}")

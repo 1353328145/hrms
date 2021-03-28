@@ -54,4 +54,9 @@ public class DepartmentService implements DepartmentServiceInterface{
     public int getCount() {
         return departmentMapper.selectCount(null);
     }
+
+    @Override
+    public List<Department> getAll() {
+        return departmentMapper.getAll();
+    }
 }

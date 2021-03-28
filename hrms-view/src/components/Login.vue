@@ -6,7 +6,7 @@
             <span class="font_title">后台管理登录</span>
           </el-form-item>
           <el-form-item prop="uid">
-            <el-input v-model="form.uid" prefix-icon="el-icon-user-solid" ></el-input>
+            <el-input v-model="form.uid" prefix-icon="el-icon-user-solid"></el-input>
           </el-form-item>
           <el-form-item prop="password">
             <el-input v-model="form.password" prefix-icon="el-icon-lock" type="password"></el-input>

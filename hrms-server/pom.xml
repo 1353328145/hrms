@@ -13,6 +13,7 @@
         <module>hrms-model</module>
         <module>hrms-service</module>
         <module>hrms-web</module>
+        <module>img-store</module>
     </modules>
 
     <parent>

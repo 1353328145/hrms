@@ -10,4 +10,6 @@ import java.util.List;
 public interface DepartmentMapper extends BaseMapper<Department> {
 
     List<Department> getDepartmentByInfo(Department department);
+
+    List<Department> getAll();
 }

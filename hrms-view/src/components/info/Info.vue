@@ -15,13 +15,10 @@
               </div>
             </el-col>
             <el-col :span="11" style="height: 100%">
-
-                  <el-card class="infoShowBox">
+                  <el-card class="infoShowBox" shadow="never">
                     <div class="sum">公司部门总数:<sapn class="sumVal">{{ dpSum }}</sapn></div>
                     <div class="sum">公司员工总数:<sapn class="sumVal">{{ emSum }}</sapn></div>
-
                   </el-card>
-
             </el-col>
           </el-row>
         </el-tab-pane>
@@ -239,6 +236,9 @@
             let arr = res.data.extend.info;
             let list = [];
             for (let i = 0; i < arr.length; i++) {
+              if (!arr[i].name){
+                arr[i].name = '暂无部门'
+              }
               list.push(arr[i].name)
             }
             left.setOption({
@@ -504,7 +504,7 @@
     margin-top: 10px;
   }
   .sum{
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 20px;
     font-weight: bolder;
   }

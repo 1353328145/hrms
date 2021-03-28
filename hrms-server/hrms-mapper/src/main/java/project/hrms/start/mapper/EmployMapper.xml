@@ -28,7 +28,7 @@
         </association>
         <association property="department" javaType="project.hrms.start.entity.Department">
             <id property="did" column="did" />
-            <result property="name" column="name" />
+            <result property="name" column="dname" />
             <result property="adminEmploy" column="admin_employ" />
             <result property="description" column="description" />
             <result property="pdid" column="pdid"/>
@@ -49,15 +49,25 @@
         where department_id = #{did}
     </update>
     <select id="getOneByUid" resultMap="EmployMap">
-        select e.*,r.role_name,r.role_val
+        select e.*,
+               r.role_name,
+               r.role_val,
+               d.name dname,
+               d.description
         from employ e
             left join role r on e.role_id = r.rid
+            left join department d on e.department_id = d.did
         where uid = #{uid}
     </select>
     <select id="getAllByInfo" resultMap="EmployMap">
-        select e.*,r.role_name,r.role_val
+        select e.*,
+               r.role_name,
+               r.role_val,
+               d.name dname,
+               d.description
         from employ e
                  left join role r on e.role_id = r.rid
+                 left join department d on e.department_id = d.did
         <where>
             <if test="uid != null">
                 and uid = #{uid}
@@ -66,10 +76,13 @@
                 and phone = #{phone}
             </if>
             <if test="name != null and name != ''">
-                and name = #{name}
+                and e.name = #{name}
             </if>
             <if test="roleId != null and roleId != -1">
                 and role_id = #{roleId}
+            </if>
+            <if test="departmentId != null and departmentId != -1">
+                and department_id = #{departmentId}
             </if>
         </where>
     </select>

@@ -2,13 +2,18 @@ package project.hrms.start.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.jexing.cup.ImageStore;
+import com.jexing.cup.exception.FileTypeNotSupportedException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import project.hrms.start.parameter.Msg;
 import project.hrms.start.entity.Employ;
 import project.hrms.start.service.EmployService;
 import project.hrms.start.service.EmployServiceInterface;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 @RestController
@@ -16,6 +21,9 @@ import java.util.List;
 public class EmployController {
     @Autowired
     private EmployServiceInterface employService;
+
+    @Autowired
+    private ImageStore store;
 
     @GetMapping("loadEmployForAuth/{pageNum}")
     public Msg loadEmployForAuth(Employ employ, @PathVariable("pageNum") Integer pageNum){
@@ -50,4 +58,34 @@ public class EmployController {
             return employ == null?Msg.fail():Msg.success().add("employ",employ);
     }
 
+    @PutMapping("em")
+    public Msg updateEmploy (@RequestBody Employ employ){
+        return employService.update(employ)?Msg.success():Msg.fail();
+    }
+
+    @DeleteMapping("em/{uid}")
+    public Msg deleteEmploy (@PathVariable("uid") Long uid){
+        return employService.delete(uid)?Msg.success():Msg.fail();
+    }
+
+    @PostMapping("img")
+    public Msg upload(MultipartFile file) {
+        InputStream inputStream = null;
+        try {
+            inputStream = file.getInputStream();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return Msg.fail();
+        }
+        String key = employService.uploadImg(inputStream,file.getContentType());
+        return key == null? Msg.fail():Msg.success().add("key",key);
+    }
+    @PutMapping("updateImgKey")
+    public Msg updateImgKey(@RequestBody Employ employ){
+        return employService.updateImgKey(employ)?Msg.success():Msg.fail();
+    }
+    @GetMapping("getImg")
+    public Msg getImg(String key){
+        return key == null?Msg.fail():Msg.success().add("img",store.getObjForBase64(key));
+    }
 }

@@ -2,6 +2,7 @@ package project.hrms.start.service;
 
 import project.hrms.start.entity.Department;
 import project.hrms.start.parameter.ChartData;
+import project.hrms.start.parameter.Msg;
 
 import java.util.List;
 import java.util.Map;
@@ -15,4 +16,6 @@ public interface DepartmentServiceInterface {
     List<ChartData> getEmployInfoByDp();
 
     int getCount();
+
+    List<Department> getAll();
 }

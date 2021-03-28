@@ -12,6 +12,11 @@
     <artifactId>hrms-model</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>project.hrms.start</groupId>
+            <artifactId>img-store</artifactId>
+            <version>1.0</version>
+        </dependency>
         <!--     fastjson-->
         <dependency>
             <groupId>com.alibaba</groupId>

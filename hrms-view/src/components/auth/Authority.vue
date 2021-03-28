@@ -43,6 +43,9 @@
                         <el-table-column type="expand">
                           <template slot-scope="props">
                             <el-form label-position="left" inline class="demo-table-expand">
+                              <el-form-item label="工号:">
+                                <span>{{ props.row.uid }}</span>
+                              </el-form-item>
                               <el-form-item label="性别:">
                                 <span>{{ props.row.sex === 0?'男':'女' }}</span>
                               </el-form-item>
@@ -83,9 +86,9 @@
                           </template>
                         </el-table-column>
                         <el-table-column
-                          label="工号"
-                          prop="uid"
-                          width="180">
+                          label="部门"
+                          prop="department.name"
+                          width="110">
                         </el-table-column>
                         <el-table-column
                           label="姓名"
@@ -95,9 +98,9 @@
                         <el-table-column
                           label="电话"
                           prop="phone"
-                          width="150">
+                          width="120">
                         </el-table-column>
-                        <el-table-column label="操作" width="180" >
+                        <el-table-column label="操作" >
                           <template slot-scope="scope">
                             <el-button @click.native.prevent="bindingRole(scope.row)" type="text" size="small">
                               绑定角色

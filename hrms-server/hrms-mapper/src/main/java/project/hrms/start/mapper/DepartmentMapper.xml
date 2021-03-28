@@ -20,6 +20,9 @@
             </if>
         </where>
     </select>
+    <select id="getAll" resultMap="BaseResultMap">
+        select * from department
+    </select>
 
 
 </mapper>
