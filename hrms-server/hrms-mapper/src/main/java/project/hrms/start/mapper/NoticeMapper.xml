@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project.hrms.start.mapper.NoticeMapper">
+    <resultMap type="project.hrms.start.entity.Notice" id="NoticeMap">
+        <id property="nid" column="nid" />
+        <result property="uid" column="uid" />
+        <result property="title" column="title" />
+        <result property="content" column="content"/>
+        <result property="createTime" column="create_time"/>
+        <result property="employRoleName" column="roleName"/>
+        <association property="employ" javaType="project.hrms.start.entity.Employ" >
+            <result property="name" column="name" />
+            <result property="phone" column="phone" />
+            <result property="email" column="email" />
+        </association>
+    </resultMap>
+    <select id="getAllByTitle" resultMap="NoticeMap">
+        select n.*,e.name name,e.phone phone,e.email email,r.role_name roleName
+        from notice n
+        left join employ e on n.uid = e.uid
+        left join role r on r.rid = e.role_id
+        <where>
+            <if test="title != null and title != ''">
+                and title like concat('%',#{title},'%')
+            </if>
+        </where>
+        order by n.create_time desc
+    </select>
+</mapper>

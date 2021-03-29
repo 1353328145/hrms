@@ -444,6 +444,7 @@
               });
             }else{
               this.$message.warning("格式不正确")
+              return false;
             }
           });
         },

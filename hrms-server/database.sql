@@ -75,7 +75,12 @@ insert into department (`name`, `admin_employ`, `description`, `pdid`) VALUES ('
 insert into department (`name`, `admin_employ`, `description`, `pdid`) VALUES ('人力资源部', NULL, '人力资源', 3);
 insert into department (`name`, `admin_employ`, `description`, `pdid`) VALUES ('售后部', NULL, '售后', 3);
 
-
+create table notice(
+    nid int not null primary key auto_increment,
+    title char(20),
+    content char(250),
+    create_time datetime
+);
 -- 打卡表
 create table sign(
     sid bigint primary key, -- 打卡id
