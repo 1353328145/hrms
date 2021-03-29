@@ -87,8 +87,10 @@
                         </el-table-column>
                         <el-table-column
                           label="部门"
-                          prop="department.name"
                           width="110">
+                          <template slot-scope="scope">
+                            <span>{{ scope.row.department === null?"暂无部门":scope.row.department.name }}</span>
+                          </template>
                         </el-table-column>
                         <el-table-column
                           label="姓名"

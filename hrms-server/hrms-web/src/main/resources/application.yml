@@ -21,3 +21,10 @@ pagehelper:
   params: count=countSql
 cup:
   path: D:\imageStore
+company:
+  name: abc股份有限公司
+  createDate: 2020-01-12
+  legal: 张三
+  address: 河南省安阳市文峰区
+  info: 先帝创业未半而中道崩殂，今天下三分，益州疲弊，此诚危急存亡之秋也。然侍卫之臣不懈于内，忠志之士忘身于外者，盖追先帝之殊遇，欲报之于陛下也。
+

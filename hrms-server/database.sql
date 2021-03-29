@@ -14,7 +14,7 @@ create table employ(
     school char(30), -- 毕业学校
     email char(30), -- 邮件
     contract date, -- 合同期限
-    department_id int, -- 部门id
+    department_id int default -1, -- 部门id
     birthday date, -- 生日 ——> 年龄
     employ_from char(200), -- 聘用形式
     role_id int, -- 角色id
@@ -62,7 +62,7 @@ create table department(
     name char (20), --  部门名称
     admin_employ bigint, -- 管理员
     description char (200), -- 部门职能描述
-    pdid int -- 父部门id
+    pdid int default -1 -- 父部门id
 );
 insert into department (`name`, `admin_employ`, `description`, `pdid`) VALUES ('财务部', NULL, '财务', NULL);
 insert into department (`name`, `admin_employ`, `description`, `pdid`) VALUES ('业务部', NULL, '业务', NULL);

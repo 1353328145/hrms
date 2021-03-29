@@ -16,19 +16,19 @@
         </el-col>
         <el-col :span="12" style="height: 100%">
           <el-card style="height: 100%" shadow="never">
-            <el-row>
-              <el-button type="primary">变更部门依赖关系</el-button>
-            </el-row>
             <el-row v-if="currentDepartment != null ">
-              <div style="text-align: center;font-size: 20px;font-weight: bolder;color: cornflowerblue"> {{ currentDepartment.name }} </div>
+              <el-row>
+                <el-button type="primary" plain @click="openDependDialog">变更部门依赖关系</el-button>
+              </el-row>
+              <div style="text-align: center;font-size: 20px;font-weight: bolder;color: slategray"> {{ currentDepartment.name }} </div>
               <div class="title">部门职能:</div>
               <div class="info"> {{ currentDepartment.description }} </div>
               <div class="title">部门管理员工号</div>
               <div class="info"> {{ currentDepartment.adminEmploy === 0?'暂无管理员':currentDepartment.adminEmploy }}</div>
-              <div style="float: right" v-if="currentDepartment.adminEmploy !== 0"><el-button type="primary" @click="look">查看管理员详细信息</el-button></div>
+              <div style="float: right" v-if="currentDepartment.adminEmploy !== 0"><el-button type="success" plain @click="look">查看管理员详细信息</el-button></div>
             </el-row>
             <el-row v-if="currentDepartment == null ">
-              单击左侧组件查看部门信息
+              单击选择组件查看部门信息
             </el-row>
           </el-card>
         </el-col>
@@ -44,6 +44,29 @@
         <el-button @click="adminDialog = false">离 开</el-button>
       </span>
       </el-dialog>
+
+      <el-dialog
+        title="变更依赖"
+        :visible.sync="dependDialog"
+        width="30%">
+      <span>
+        <el-form>
+          <el-form-item label="请选择父部门">
+            <el-select v-model="departmentUpdate.pdid" placeholder="请选择">
+              <el-option
+                v-for="item in departments"
+                :key="item.did"
+                :label="item.name"
+                :value="item.did">
+              </el-option>
+            </el-select>
+          </el-form-item>
+        </el-form>
+      </span>
+        <span slot="footer" class="dialog-footer">
+        <el-button @click="save()">保 存</el-button>
+      </span>
+      </el-dialog>
     </div>
 </template>
 
@@ -54,17 +77,57 @@
       components: {EmployInfo},
       data() {
         return {
+          dependDialog:false,
           adminDialog:false,
           tree:[],
           defaultProps: {
             children: 'children',
             label: 'label'
           },
+          departments:[],
           currentDepartment:null,
-          currentAdmin:null
+          currentAdmin:null,
+          departmentUpdate:{
+            did:'',
+            pdid: null
+          }
         };
       },
       methods:{
+        save(){
+          if (!this.departmentUpdate.did||!this.departmentUpdate.pdid){
+            return;
+          }
+          this.$http.put("department/dp",this.departmentUpdate).then(res=>{
+            if (res.status===200){
+              if (res.data.flag){
+                this.$message.success("修改成功");
+                this.dependDialog = false;
+                this.getTree();
+              }else{
+                this.$message.warning("修改失败")
+              }
+            } else{
+              this.$message.warning("请求出现问题")
+            }
+          })
+        },
+        openDependDialog(){
+          if (this.currentDepartment == null){
+            this.$message.warning("请选择部门");
+            return;}
+          this.departmentUpdate.did = this.currentDepartment.did;
+          this.departmentUpdate.pdid = this.currentDepartment.pdid;
+          if (this.departmentUpdate.pdid === 0 || this.departmentUpdate.pdid==null || this.departmentUpdate.pdid === -1){
+            this.departmentUpdate.pdid =this.departmentUpdate.did;
+          }
+          this.dependDialog = true;
+          this.$http.get("department/all").then(res=>{
+            if (res.status===200){
+              this.departments = res.data.extend.dp;
+            }else{tshi.$message.error("请求出现问题")}
+          })
+        },
         look(){
           this.$http.get('employ/findByUid/'+this.currentDepartment.adminEmploy).then(res =>{
             if (res.status === 200){

@@ -28,6 +28,9 @@ public class DepartmentService implements DepartmentServiceInterface{
     @Override
     public boolean updateDepartmentByDid(Department department) {
         if (department.getDid() == null){return false;}
+        if (department.getPdid().equals(department.getDid())){
+            department.setPdid(-1);
+        }
         return departmentMapper.updateById(department) > 0;
     }
 
@@ -71,7 +74,7 @@ public class DepartmentService implements DepartmentServiceInterface{
             map.put(department.getDid(), treeNode);
         }
         for (Department department : departments) {
-            if (department.getPdid()!=null){
+            if (department.getPdid()!=null && department.getPdid() > 0){
                 map.get(department.getPdid()).add(map.get(department.getDid()));
             }else{
                 answer.add(map.get(department.getDid()));

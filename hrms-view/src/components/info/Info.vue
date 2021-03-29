@@ -15,10 +15,50 @@
               </div>
             </el-col>
             <el-col :span="11" style="height: 100%">
-                  <el-card class="infoShowBox" shadow="never">
-                    <div class="sum">公司部门总数:<sapn class="sumVal">{{ dpSum }}</sapn></div>
-                    <div class="sum">公司员工总数:<sapn class="sumVal">{{ emSum }}</sapn></div>
+              <el-row>
+                <el-card class="infoBox" shadow="never">
+                  <div slot="header" class="clearfix">
+                    <span>公司信息</span>
+                  </div>
+                  <div class="item">
+                    公司名称: {{ company===null?'加载中':company.name }}
+                  </div>
+                  <div class="item">
+                    公司成立日期: {{ company===null?'加载中':company.createDate }}
+                  </div >
+                  <div class="item">
+                    公司法定代表人: {{ company===null?'加载中':company.legal }}
+                  </div>
+                  <div class="item">
+                    公司地址: {{ company===null?'加载中':company.address }}
+                  </div>
+                  <div class="item">
+                    公司简介: {{ company===null?'加载中':company.info }}
+                  </div>
+                </el-card>
+              </el-row>
+              <el-row :gutter="20" style="margin-top: 5%">
+                <el-col :span="12">
+                  <el-card  shadow="never">
+                    <div slot="header" class="clearfix">
+                      <span>部门数量</span>
+                    </div>
+                    <div  class="text">
+                      {{ dpSum }}
+                    </div>
                   </el-card>
+                </el-col>
+                <el-col :span="12">
+                  <el-card  shadow="never">
+                    <div slot="header" class="clearfix">
+                      <span>总员工数</span>
+                    </div>
+                    <div class="text">
+                      {{ emSum }}
+                    </div>
+                  </el-card>
+                </el-col>
+              </el-row>
             </el-col>
           </el-row>
         </el-tab-pane>
@@ -173,6 +213,7 @@
       components: {EmployInfo},
       data(){
         return{
+          company:null,
           dpSum:0,
           emSum:0,
           ec:'',
@@ -220,6 +261,13 @@
         }
       },
       methods:{
+        loadCompany(){
+          this.$http.get("department/company").then(res =>{
+            if (res.status ===200){
+              this.company = res.data.extend.company;
+            }
+          })
+        },
         loadCount(){
           this.$http.get("department/getDpCount").then(res =>{
             this.dpSum = res.data.extend.dpCount;
@@ -491,6 +539,7 @@
       created() {
         this.loadDpList();
         this.loadCount();
+        this.loadCompany();
       },
       mounted() {
         this.infoInit()
@@ -499,16 +548,21 @@
 </script>
 
 <style scoped>
-  .infoShowBox{
-    height: 200px;
-    margin-top: 10px;
+.text{
+  color: slategray;
+  font-weight: bolder;
+  font-size: 35px;
+}
+  .item{
+    font-size: 14px;
+    margin-bottom: 15px;
   }
-  .sum{
-    font-size: 20px;
-    margin-top: 20px;
-    font-weight: bolder;
-  }
-  .sumVal{
-    color: brown;
-  }
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both
+}
 </style>

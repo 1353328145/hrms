@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import project.hrms.start.component.Company;
 import project.hrms.start.entity.Department;
 import project.hrms.start.entity.Role;
 import project.hrms.start.parameter.Msg;
@@ -21,6 +22,10 @@ public class DepartmentController {
 
     @Autowired
     private EmployServiceInterface employServiceInterface;
+
+    @Autowired
+    private Company company;
+
     @GetMapping("dp/{pageNum}")
     public Msg getDp(@PathVariable("pageNum") Integer pageNum, Department department){
         if (pageNum==null){
@@ -69,4 +74,7 @@ public class DepartmentController {
     public Msg getTree(){
         return Msg.success().add("tree",departmentService.getAllWithTree());
     }
+
+    @GetMapping("company")
+    public Msg getCompany(){return Msg.success().add("company",company);}
 }
