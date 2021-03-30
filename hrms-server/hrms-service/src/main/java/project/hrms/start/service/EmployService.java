@@ -10,6 +10,7 @@ import project.hrms.start.entity.Department;
 import project.hrms.start.entity.Employ;
 import project.hrms.start.mapper.DepartmentMapper;
 import project.hrms.start.mapper.EmployMapper;
+import project.hrms.start.parameter.ChartData;
 
 import java.io.InputStream;
 import java.util.Date;
@@ -82,5 +83,10 @@ public class EmployService implements EmployServiceInterface{
             store.delete(imgKey);
         }
         return employMapper.updateById(employ)>0;
+    }
+
+    @Override
+    public List<ChartData> getCountGroupByCulture() {
+        return employMapper.getCountGroupByCulture();
     }
 }

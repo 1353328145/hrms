@@ -6,12 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="hrmsmodel" />
         <module name="hrms-mapper" />
         <module name="hrms-model" />
         <module name="hrms-service" />
-        <module name="hrmsmapper" />
         <module name="hrms-web" />
+        <module name="hrmsmapper" />
+        <module name="hrmsmodel" />
         <module name="hrmsservice" />
         <module name="img-store" />
       </profile>

@@ -97,4 +97,8 @@
           on employ.department_id = department.did
         GROUP BY department_id
     </select>
+    <select id="getCountGroupByCulture" resultType="project.hrms.start.parameter.ChartData">
+        select  culture name,count(*) value from employ
+        GROUP BY culture
+    </select>
 </mapper>

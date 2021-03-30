@@ -12,10 +12,16 @@
             <result property="name" column="name" />
             <result property="phone" column="phone" />
             <result property="email" column="email" />
+            <result property="imgKey" column="imgKey"/>
         </association>
     </resultMap>
-    <select id="getAllByTitle" resultMap="NoticeMap">
-        select n.*,e.name name,e.phone phone,e.email email,r.role_name roleName
+    <select id="getAllByTitle" resultMap="NoticeMap"    >
+        select n.*,
+        e.name name,
+        e.phone phone,
+        e.email email,
+        e.img_key imgKey,
+        r.role_name roleName
         from notice n
         left join employ e on n.uid = e.uid
         left join role r on r.rid = e.role_id

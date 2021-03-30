@@ -1,9 +1,0 @@
-<changelist name="Uncommitted_changes_before_Update_at_2021_3_28_9_43_[Default_Changelist]" date="1616895816893" recycled="true">
-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_3_28_9_43_[Default_Changelist]/shelved.patch" />
-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2021/3/28 9:43 [Default Changelist]" />
-  <binary>
-    <option name="BEFORE_PATH" value="hrms-web/target/classes/project/hrms/start/controller/RouterController.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
-  </binary>
-</changelist>

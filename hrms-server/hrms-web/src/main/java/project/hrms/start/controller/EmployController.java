@@ -5,8 +5,10 @@ import com.github.pagehelper.PageInfo;
 import com.jexing.cup.ImageStore;
 import com.jexing.cup.exception.FileTypeNotSupportedException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import project.hrms.start.parameter.ChartData;
 import project.hrms.start.parameter.Msg;
 import project.hrms.start.entity.Employ;
 import project.hrms.start.service.EmployService;
@@ -87,5 +89,14 @@ public class EmployController {
     @GetMapping("getImg")
     public Msg getImg(String key){
         return key == null?Msg.fail():Msg.success().add("img",store.getObjForBase64(key));
+    }
+
+    @GetMapping(value = "img",produces = MediaType.IMAGE_JPEG_VALUE)
+    public byte[] getImgForByte(String key){
+        return store.getObjForByte(key);
+    }
+    @GetMapping("CountGroupByCulture")
+    public Msg getCountGroupByCulture() {
+        return Msg.success().add("info",employService.getCountGroupByCulture());
     }
 }

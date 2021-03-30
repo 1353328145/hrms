@@ -22,5 +22,6 @@ public interface EmployMapper extends BaseMapper<Employ> {
 
     List<ChartData> getCountGroupByDid();
 
+    List<ChartData> getCountGroupByCulture();
 
 }

@@ -2,6 +2,7 @@ package project.hrms.start.service;
 
 import org.apache.shiro.crypto.hash.Md5Hash;
 import project.hrms.start.entity.Employ;
+import project.hrms.start.parameter.ChartData;
 
 import java.io.InputStream;
 import java.util.List;
@@ -22,4 +23,6 @@ public interface EmployServiceInterface {
     String uploadImg(InputStream inputStream, String contentType);
 
     boolean updateImgKey(Employ employ);
+
+    List<ChartData> getCountGroupByCulture();
 }
