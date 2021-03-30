@@ -87,7 +87,7 @@
             <el-table-column label="操作" width="300">
               <template slot-scope="scope">
                 <el-button size="mini" @click="setDepartment(scope.row)">
-                  设置部门
+                  设置
                 </el-button>
                 <el-button size="mini" type="danger" @click="deleteEmploy(scope.row)">
                   注销
@@ -202,8 +202,37 @@
       :visible.sync="employUpdateDialog"
       width="30%">
       <span>
-        <el-form>
-          <el-form-item label="部门">
+        <el-form label-position="left" label-width="80px" :model="updateDepartment" :rules="updateRules" ref="employUpdateFormX">
+          <el-form-item label="联系地址" prop="address">
+            <el-input type="text" v-model="updateDepartment.address"></el-input>
+          </el-form-item>
+          <el-form-item label="身份证号" prop="idNumber">
+            <el-input type="text" v-model="updateDepartment.idNumber"></el-input>
+          </el-form-item>
+          <el-form-item label="最高学历" prop="culture">
+            <el-select v-model="updateDepartment.culture" placeholder="请选择">
+              <el-option
+                v-for="item in cultureOptions"
+                :key="item"
+                :label="item"
+                :value="item">
+              </el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item label="毕业学校">
+            <el-input type="text" v-model="updateDepartment.school"></el-input>
+          </el-form-item>
+          <el-form-item label="合同日期" prop="contract">
+              <el-date-picker
+                v-model="updateDepartment.contract"
+                type="date"
+                placeholder="选择日期">
+              </el-date-picker>
+          </el-form-item>
+          <el-form-item label="聘用形式" prop="employFrom">
+            <el-input type="text" v-model="updateDepartment.employFrom"></el-input>
+          </el-form-item>
+          <el-form-item label="部门" prop="departmentId">
             <el-select v-model="updateDepartment.departmentId" filterable placeholder="请选择" >
               <el-option
                 v-for="item in departmentList"
@@ -362,6 +391,35 @@ export default {
       updateDepartment:{
         uid:'',
         departmentId:'',
+        address:'',
+        idNumber:'',
+        culture:'',
+        school:'',
+        contract:'',
+        employFrom:''
+      },
+      updateRules:{
+        address:[
+          { required: true, message: '请输入内容', trigger: 'blur' },
+          {  max: 25, message: '25 个字符以内', trigger: 'blur' }
+        ],
+        idNumber:[
+          { required: true, message: '请输入内容', trigger: 'blur' },
+          {  min:18 ,max: 18, message: '请输入正确的身份证号', trigger: 'blur' }
+        ],
+        culture:[
+          { required: true, message: '请选择内容', trigger: 'blur' },
+        ],
+        contract:[
+          { required: true, message: '请选择日期', trigger: 'change' }
+        ],
+        employFrom:[
+          { required: true, message: '请输入内容', trigger: 'blur' },
+          {  max: 100, message: '100 个字符以内', trigger: 'blur' }
+        ],
+        departmentId:[
+          { required: true, message: '请输入内容', trigger: 'blur' },
+        ]
       }
     }
   },
@@ -409,7 +467,6 @@ export default {
     uploadImg(){
       this.$refs.imgUploadRef.submit();
     },
-
     img(data){
       this.fileList = [];
       this.$http.get("employ/getImg?key="+data.imgKey).then(res =>{
@@ -422,7 +479,13 @@ export default {
     },
     setDepartment(data){
       this.updateDepartment.uid = data.uid;
-      this.updateDepartment.departmentId = data.departmentId === 0?-1:data.departmentId
+      this.updateDepartment.departmentId = data.departmentId === 0?-1:data.departmentId;
+      this.updateDepartment.address = data.address;
+      this.updateDepartment.idNumber = data.idNumber;
+      this.updateDepartment.culture = data.culture;
+      this.updateDepartment.school = data.school;
+      this.updateDepartment.contract = data.contract;
+      this.updateDepartment.employFrom = data.employFrom;
       this.employUpdateDialog = true;
     },
     updateEmploy(){
@@ -431,6 +494,7 @@ export default {
         cancelButtonText: '取消',
         type: 'warning'
       }).then(() => {
+        console.log(this.updateDepartment)
           this.$http.put("employ/em",this.updateDepartment).then(res =>{
             if (res.status===200){
               if (res.data.flag){

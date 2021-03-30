@@ -9,6 +9,7 @@ import Employ from "../components/employ/Employ";
 import Framework from '../components/framework/Framework'
 import MsgPush from "../components/msg/MsgPush";
 import InfoUpdate from "../components/employ/InfoUpdate";
+import Sign from "../components/sign/Sign";
 Vue.use(Router);
 
 const router= new Router({
@@ -27,7 +28,7 @@ const router= new Router({
         {path: '/home/framework', component: Framework},
         {path: '/home/msg', component: MsgPush},
         {path: '/home/employ_info',component: InfoUpdate},
-        {path: '/home/attendance',component: InfoUpdate},
+        {path: '/home/attendance',component: Sign},
       ]
     }
   ]
