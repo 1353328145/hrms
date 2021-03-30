@@ -15,10 +15,6 @@
       name: "EmployInfoInline",
       data(){
           return{
-            employName:this.employName,
-            url:this.url,
-            role:this.role,
-            roleName:this.roleName,
             headUrl:'http://localhost:8080/employ/img?key='
           }
       },

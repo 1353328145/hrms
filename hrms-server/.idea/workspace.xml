@@ -4,48 +4,25 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
+    <expand />
+    <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2be4938-f5b2-43d5-b40b-132766b072f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../hrms-view/src/components/EmployInfoInline.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_3_28_9_43__Default_Changelist_.xml" beforeDir="false" />
+    <list default="true" id="b2be4938-f5b2-43d5-b40b-132766b072f3" name="Default Changelist" comment="通知管理">
+      <change afterPath="$PROJECT_DIR$/../hrms-view/src/components/employ/InfoUpdate.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/EmployMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/EmployMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/EmployMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/EmployMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/NoticeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/NoticeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/RoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/EmployService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/EmployService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/EmployServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/EmployServiceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/config/MyMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/config/MyMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/EmployController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/EmployController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/NoticeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hrms-view/src/components/EmployInfoInline.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../hrms-view/src/components/EmployInfoInline.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hrms-view/src/components/main/Main.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../hrms-view/src/components/main/Main.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hrms-view/src/components/msg/MsgPush.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../hrms-view/src/components/msg/MsgPush.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hrms-view/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../hrms-view/src/router/index.js" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/hrms-mapper/target/" />
-    <ignored path="$PROJECT_DIR$/hrms-model/target/" />
-    <ignored path="$PROJECT_DIR$/hrms-web/target/" />
-    <ignored path="$PROJECT_DIR$/hrms-service/target/" />
-    <ignored path="D:\hrms\hrms\hrms-server\.idea\shelf/" />
-    <ignored path="$PROJECT_DIR$/img-store/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,170 +31,10 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="hrm@123.56.251.13" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="hrm@123.56.251.13" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="hrm@123.56.251.13" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="hrm: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="hrm@123.56.251.13" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="hrm: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="department: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-    </expand>
-    <select />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/EmployController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-461">
-              <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#loadEmployForAuth#0;class#EmployController#0" />
-                <element signature="method#uidTest#0;class#EmployController#0" />
-                <element signature="method#findByUid#0;class#EmployController#0" />
-                <element signature="method#updateEmploy#0;class#EmployController#0" />
-                <element signature="method#upload#0;class#EmployController#0" />
-                <element signature="e#3299#3300#0" expanded="true" />
-                <element signature="e#3346#3347#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/Employ.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="54" column="33" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/EmployMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
-              <caret line="99" column="26" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
-              <folding>
-                <element signature="n#select#1;n#mapper#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/Menu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#493#494#0" expanded="true" />
-                <element signature="e#520#521#0" expanded="true" />
-                <element signature="e#560#561#0" expanded="true" />
-                <element signature="e#592#593#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/Department.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#553#554#0" expanded="true" />
-                <element signature="e#581#582#0" expanded="true" />
-                <element signature="e#623#624#0" expanded="true" />
-                <element signature="e#657#658#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/Notice.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/NoticeMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/NoticeMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/RoleMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/MenuMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -226,471 +43,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/util/SpringFactoryUtil.java" />
-        <option value="$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/bo/Msg.java" />
-        <option value="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/interceptor/TokenInterceptor.java" />
-        <option value="$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/Role.java" />
-        <option value="$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/EmployMenu.java" />
-        <option value="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/config/MyBatisPlusConfig.java" />
-        <option value="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/MenuMapper.xml" />
-        <option value="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/EmployMenuMapper.xml" />
-        <option value="$PROJECT_DIR$/hrms-mapper/pom.xml" />
-        <option value="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/Application.java" />
-        <option value="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/config/ShiroConfig.java" />
-        <option value="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/exception/MyExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/Menu.java" />
-        <option value="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/EmployMenuMapper.java" />
-        <option value="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/MenuMapper.java" />
-        <option value="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/realm/CustomerRealm.java" />
-        <option value="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/AuthorityController.java" />
-        <option value="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/AuthorityService.java" />
-        <option value="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/AuthorityServiceInterface.java" />
-        <option value="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/DepartmentMapper.java" />
-        <option value="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/DepartmentMapper.xml" />
-        <option value="$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/Department.java" />
-        <option value="$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/Employ.java" />
-        <option value="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/RoleMapper.xml" />
-        <option value="$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/parameter/ChartData.java" />
-        <option value="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/DepartmentServiceInterface.java" />
-        <option value="$PROJECT_DIR$/hrms-web/src/test/java/project/hrms/start/TestAythority.java" />
-        <option value="$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/parameter/TreeNode.java" />
-        <option value="$PROJECT_DIR$/hrms-web/src/main/resources/info.properties" />
-        <option value="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/DepartmentController.java" />
-        <option value="$PROJECT_DIR$/hrms-web/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/component/Company.java" />
-        <option value="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/DepartmentService.java" />
-        <option value="$PROJECT_DIR$/database.sql" />
-        <option value="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/EmployMapper.java" />
-        <option value="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/EmployMapper.xml" />
-        <option value="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/EmployServiceInterface.java" />
-        <option value="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/EmployService.java" />
-        <option value="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/SignController.java" />
-        <option value="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/EmployController.java" />
-        <option value="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/config/MyMvcConfig.java" />
-        <option value="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/RoleMapper.java" />
-        <option value="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/NoticeMapper.xml" />
-      </list>
-    </option>
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\MAVEN\cangku\maven_repository" />
-        <option name="mavenHome" value="D:/MAVEN/apache-maven-3.5.2" />
-        <option name="userSettingsFile" value="D:\MAVEN\apache-maven-3.5.2\conf\settings.xml" />
+        <option name="localRepository" value="D:\javaIDE\apache-maven-3.3.9-bin\repository" />
+        <option name="mavenHome" value="D:\javaIDE\apache-maven-3.3.9-bin\apache-maven-3.3.9" />
+        <option name="userSettingsFile" value="D:\javaIDE\apache-maven-3.3.9-bin\apache-maven-3.3.9\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="hrms-mapper" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="hrms-mapper" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-74" />
-    <option name="y" value="56" />
-    <option name="width" value="1805" />
-    <option name="height" value="1035" />
-  </component>
   <component name="ProjectId" id="1qCWq2TDI3BSXPhGjhz6AagQ379" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms" type="462c0819:PsiDirectoryNode" />
-              <item name="start" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms" type="462c0819:PsiDirectoryNode" />
-              <item name="start" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms" type="462c0819:PsiDirectoryNode" />
-              <item name="start" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms" type="462c0819:PsiDirectoryNode" />
-              <item name="start" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms" type="462c0819:PsiDirectoryNode" />
-              <item name="start" type="462c0819:PsiDirectoryNode" />
-              <item name="parameter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms" type="462c0819:PsiDirectoryNode" />
-              <item name="start" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms" type="462c0819:PsiDirectoryNode" />
-              <item name="start" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms" type="462c0819:PsiDirectoryNode" />
-              <item name="start" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms" type="462c0819:PsiDirectoryNode" />
-              <item name="start" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms" type="462c0819:PsiDirectoryNode" />
-              <item name="start" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hrms-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hrms-server" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="hrms" type="462c0819:PsiDirectoryNode" />
-              <item name="start" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -698,41 +71,32 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="D:/MyCode/LabManage/labmanage_server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\hrms\hrms\hrms-server\hrms-mapper\src\main\java\project\hrms\start\mapper" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="project.hrms.start.exception" />
       <recent name="project.hrms.start.config" />
       <recent name="project.hrms.start.util" />
       <recent name="project.hrms.start.interceptor" />
       <recent name="project.hrms.start.realm" />
+      <recent name="project.hrms.start" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\hrms\hrms\hrms-server\hrms-model\src\main\java\project\hrms\start\bo" />
+      <recent name="D:\hrms\hrms\hrms-server\hrms-web\src\main\resources\static" />
+      <recent name="D:\hrms\hrms\hrms-server\img-store\src\main\java" />
       <recent name="D:\hrms\hrms\hrms-server\hrms-service\src\main\java" />
       <recent name="D:\hrms\hrms\hrms-server\hrms-web\src\main\resources" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="TestAythority.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -746,22 +110,6 @@
       <option name="PACKAGE_NAME" value="project.hrms.start" />
       <option name="MAIN_CLASS_NAME" value="project.hrms.start.TestAythority" />
       <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestAythority.testTree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hrms-web" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="project.hrms.start.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="project.hrms.start" />
-      <option name="MAIN_CLASS_NAME" value="project.hrms.start.TestAythority" />
-      <option name="METHOD_NAME" value="testTree" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -783,12 +131,11 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.Application" />
-        <item itemvalue="JUnit.TestAythority.testTree" />
         <item itemvalue="JUnit.TestAythority.test" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -801,753 +148,171 @@
       <updated>1616573252363</updated>
       <workItem from="1616573255589" duration="6981000" />
       <workItem from="1616584264276" duration="6511000" />
-      <workItem from="1616630327702" duration="12683000" />
-      <workItem from="1616676221787" duration="4375000" />
-      <workItem from="1616757993231" duration="7200000" />
-      <workItem from="1616808440004" duration="32777000" />
-      <workItem from="1616856887218" duration="555000" />
-      <workItem from="1616893360381" duration="56000" />
-      <workItem from="1616929608484" duration="7355000" />
-      <workItem from="1616981639708" duration="6252000" />
-      <workItem from="1617022219345" duration="2845000" />
-      <workItem from="1617064038633" duration="4001000" />
+      <workItem from="1616645022068" duration="15821000" />
+      <workItem from="1616723452874" duration="19382000" />
+      <workItem from="1616895465568" duration="24338000" />
+      <workItem from="1616995655966" duration="4324000" />
+      <workItem from="1617001161373" duration="175000" />
+      <workItem from="1617001935083" duration="13032000" />
+      <workItem from="1617076967004" duration="8481000" />
     </task>
-    <task id="LOCAL-00001" summary="基础架构搭建">
-      <created>1616643867371</created>
+    <task id="LOCAL-00001" summary="权限模块开发">
+      <created>1616673568997</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1616643867371</updated>
+      <updated>1616673568997</updated>
     </task>
-    <task id="LOCAL-00002" summary="权限员工模块">
-      <created>1616680503201</created>
+    <task id="LOCAL-00002" summary="用户模块开发完毕">
+      <created>1616924184170</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1616680503201</updated>
+      <updated>1616924184170</updated>
     </task>
-    <task id="LOCAL-00003" summary="公司信息模块">
-      <created>1616857183952</created>
+    <task id="LOCAL-00003" summary="通知管理">
+      <created>1617016187151</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1616857183953</updated>
+      <updated>1617016187151</updated>
     </task>
-    <task id="LOCAL-00004" summary="组织架构管理">
-      <created>1616937788445</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1616937788445</updated>
-    </task>
-    <task id="LOCAL-00005" summary="公司信息界面美化">
-      <created>1616988301354</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1616988301355</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="TestAythority_test - 2021.03.27 at 13h 00m 06s.xml">
-      <configuration name="TestAythority.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAythority_test - 2021.03.27 at 21h 59m 48s.xml">
-      <configuration name="TestAythority.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAythority_test - 2021.03.27 at 22h 03m 31s.xml">
-      <configuration name="TestAythority.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAythority_test - 2021.03.27 at 22h 04m 05s.xml">
-      <configuration name="TestAythority.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAythority_test - 2021.03.27 at 22h 05m 50s.xml">
-      <configuration name="TestAythority.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAythority_test - 2021.03.27 at 22h 07m 59s.xml">
-      <configuration name="TestAythority.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAythority_test - 2021.03.27 at 22h 09m 13s.xml">
-      <configuration name="TestAythority.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAythority_testTree - 2021.03.28 at 20h 11m 19s.xml">
-      <configuration name="TestAythority.testTree" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAythority_testTree - 2021.03.28 at 20h 13m 33s.xml">
-      <configuration name="TestAythority.testTree" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAythority_testTree - 2021.03.28 at 20h 15m 33s.xml">
-      <configuration name="TestAythority.testTree" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78099000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1473" height="878" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2720848" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Web" order="2" side_tool="true" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49964663" weight="0.9583333" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.9583333" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Spring" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50035334" side_tool="true" weight="0.9583333" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32916668" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" />
-      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32916668" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32508835" />
-      <window_info anchor="right" id="Maven" order="5" weight="0.32932863" />
-      <window_info anchor="right" id="Bean Validation" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2508834" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Web" order="2" side_tool="true" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" order="0" weight="0.32916668" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.9583333" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.29305556" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Spring" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" />
-      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.32916668" />
-      <window_info anchor="bottom" id="Java Enterprise" order="15" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32508835" />
-      <window_info anchor="right" id="Maven" order="5" weight="0.32932863" />
-      <window_info anchor="right" id="Bean Validation" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="基础架构搭建" />
-    <MESSAGE value="权限员工模块" />
-    <MESSAGE value="公司信息模块" />
-    <MESSAGE value="组织架构管理" />
-    <MESSAGE value="公司信息界面美化" />
-    <option name="LAST_COMMIT_MESSAGE" value="公司信息界面美化" />
+    <MESSAGE value="权限模块开发" />
+    <MESSAGE value="用户模块开发" />
+    <MESSAGE value="用户模块开发完毕" />
+    <MESSAGE value="通知管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="通知管理" />
   </component>
   <component name="WindowStateProjectService">
     <state x="488" y="134" key="#Project_Structure" timestamp="1616589724587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="488" y="134" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1616589724587" />
-    <state x="448" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616589960087">
+    <state x="448" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617005095411">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="448" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1616589960087" />
+    <state x="448" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617005095411" />
+    <state x="765" y="196" key="#com.intellij.ide.util.MemberChooser" timestamp="1617006450894">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="196" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1617006450894" />
     <state x="690" y="295" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1616590196577">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="295" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1616590196577" />
-    <state x="1181" y="382" width="440" height="464" key="FileChooserDialogImpl" timestamp="1616592268631">
+    <state x="1181" y="382" width="440" height="464" key="FileChooserDialogImpl" timestamp="1617002748802">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1181" y="382" width="440" height="464" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1616592268631" />
-    <state width="1660" height="664" key="GridCell.Tab.0.bottom" timestamp="1616592994241">
+    <state x="1181" y="382" width="440" height="464" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1617002748802" />
+    <state width="1877" height="694" key="GridCell.Tab.0.bottom" timestamp="1617086407755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1660" height="664" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616592994241" />
-    <state width="1660" height="664" key="GridCell.Tab.0.center" timestamp="1616592994241">
+    <state width="1877" height="694" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617086407755" />
+    <state width="1877" height="694" key="GridCell.Tab.0.center" timestamp="1617086407755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1660" height="664" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616592994241" />
-    <state width="1660" height="664" key="GridCell.Tab.0.left" timestamp="1616592994241">
+    <state width="1877" height="694" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617086407755" />
+    <state width="1877" height="694" key="GridCell.Tab.0.left" timestamp="1617086407755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1660" height="664" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616592994241" />
-    <state width="1660" height="664" key="GridCell.Tab.0.right" timestamp="1616592994241">
+    <state width="1877" height="694" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617086407755" />
+    <state width="1877" height="694" key="GridCell.Tab.0.right" timestamp="1617086407755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1660" height="664" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616592994241" />
-    <state width="1660" height="664" key="GridCell.Tab.1.bottom" timestamp="1616592994241">
+    <state width="1877" height="694" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617086407755" />
+    <state width="1877" height="694" key="GridCell.Tab.1.bottom" timestamp="1617086407755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1660" height="664" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616592994241" />
-    <state width="1660" height="664" key="GridCell.Tab.1.center" timestamp="1616592994241">
+    <state width="1877" height="694" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617086407755" />
+    <state width="1877" height="694" key="GridCell.Tab.1.center" timestamp="1617086407755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1660" height="664" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616592994241" />
-    <state width="1660" height="664" key="GridCell.Tab.1.left" timestamp="1616592994241">
+    <state width="1877" height="694" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617086407755" />
+    <state width="1877" height="694" key="GridCell.Tab.1.left" timestamp="1617086407755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1660" height="664" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616592994241" />
-    <state width="1660" height="664" key="GridCell.Tab.1.right" timestamp="1616592994241">
+    <state width="1877" height="694" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617086407755" />
+    <state width="1877" height="694" key="GridCell.Tab.1.right" timestamp="1617086407755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1660" height="664" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616592994241" />
-    <state width="220" height="539" key="HiddenNamespacesPopup" timestamp="1616589865373">
+    <state width="1877" height="694" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617086407755" />
+    <state width="1877" height="444" key="GridCell.Tab.2.bottom" timestamp="1616733712697">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="220" height="539" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1616589865373" />
-    <state x="278" y="187" key="SettingsEditor" timestamp="1616590568092">
+    <state width="1877" height="444" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616733712697" />
+    <state width="1877" height="444" key="GridCell.Tab.2.center" timestamp="1616733712697">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="278" y="187" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1616590568092" />
+    <state width="1877" height="444" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616733712697" />
+    <state width="1877" height="444" key="GridCell.Tab.2.left" timestamp="1616733712697">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="444" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616733712697" />
+    <state width="1877" height="444" key="GridCell.Tab.2.right" timestamp="1616733712697">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="444" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616733712697" />
+    <state width="220" height="539" key="HiddenNamespacesPopup" timestamp="1617004532113">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="220" height="539" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1617004532113" />
+    <state x="179" y="112" width="1741" height="868" key="MergeDialog" timestamp="1617077308105">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="179" y="112" width="1741" height="868" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617077308105" />
+    <state x="278" y="187" key="SettingsEditor" timestamp="1617009878170">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="278" y="187" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1617009878170" />
+    <state x="801" y="357" key="Vcs.Push.Dialog.v2" timestamp="1617087541187">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="801" y="357" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1617087541187" />
+    <state x="762" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617077280544">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="762" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1617077280544" />
+    <state x="731" y="308" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1616650618291">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="731" y="308" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1616650618291" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-1" timestamp="1617004752109">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1617004752109" />
+    <state x="576" y="189" key="new project wizard" timestamp="1616906928930">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="576" y="189" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1616906928930" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1617006423091">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617006423091" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/realm/CustomerRealm.java</url>
-          <line>39</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/config/ShiroConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="63" column="54" selection-start-line="63" selection-start-column="54" selection-end-line="63" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/interceptor/TokenInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="25" column="67" selection-start-line="25" selection-start-column="67" selection-end-line="25" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/exception/MyExceptionHandler.java" />
-    <entry file="file://$PROJECT_DIR$/hrms-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/EmployMenuMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/jdk/src.zip!/java/lang/Override.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/realm/CustomerRealm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://c6b658c2-cac2-4ef0-b0c8-f6541259a3a7/schema/hrm/table/department" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c6b658c2-cac2-4ef0-b0c8-f6541259a3a7/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-mapper/src/main/resources/mapper/DepartmentDao.xml" />
-    <entry file="file://$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/EmployMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="13" selection-start-line="13" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/AuthorityController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="88" column="36" selection-start-line="78" selection-start-column="8" selection-end-line="88" selection-end-column="36" />
-          <folding>
-            <element signature="e#4393#4394#0" expanded="true" />
-            <element signature="e#4470#4471#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-core/3.0.6/mybatis-plus-core-3.0.6.jar!/com/baomidou/mybatisplus/core/mapper/BaseMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/RoleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-web/src/test/java/project/hrms/start/TestAythority.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/parameter/TreeNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/DepartmentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/DepartmentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-web/src/main/resources/info.properties" />
-    <entry file="jar://D:/jdk/src.zip!/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="972" column="19" selection-start-line="972" selection-start-column="19" selection-end-line="972" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-179">
-          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/component/Company.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="58" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/config/MyBatisPlusConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-web/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="23" column="7" selection-start-line="23" selection-end-line="23" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/config/ImageUploadConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/DepartmentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/parameter/ChartData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/DepartmentServiceInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/DepartmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getDp#0;class#DepartmentController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/EmployMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/EmployService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="88" column="4" selection-start-line="88" selection-start-column="4" selection-end-line="90" selection-end-column="5" />
-          <folding>
-            <element signature="e#2741#2742#0" expanded="true" />
-            <element signature="e#2801#2802#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/EmployServiceInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/NoticeServiceInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/AuthorityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1846">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3205#3206#0" expanded="true" />
-            <element signature="e#3266#3267#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/AuthorityServiceInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/NoticeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="19" column="78" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
-          <folding>
-            <element signature="method#getAll#0;class#NoticeController#0" />
-            <element signature="method#delete#0;class#NoticeController#0" />
-            <element signature="method#update#0;class#NoticeController#0" />
-            <element signature="method#insert#0;class#NoticeController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE.jar!/org/springframework/web/bind/annotation/GetMapping.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/SignController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-          <folding>
-            <element signature="method#Login#0;class#SignController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/config/MyMvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="27" column="33" lean-forward="true" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <folding>
-            <element signature="method#configureMessageConverters#0;class#MyMvcConfig#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/EmployController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-461">
-          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#loadEmployForAuth#0;class#EmployController#0" />
-            <element signature="method#uidTest#0;class#EmployController#0" />
-            <element signature="method#findByUid#0;class#EmployController#0" />
-            <element signature="method#updateEmploy#0;class#EmployController#0" />
-            <element signature="method#upload#0;class#EmployController#0" />
-            <element signature="e#3299#3300#0" expanded="true" />
-            <element signature="e#3346#3347#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/Employ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="54" column="33" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#592#593#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/Department.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#581#582#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#657#658#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/Notice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/EmployMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="99" column="26" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
-          <folding>
-            <element signature="n#select#1;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/RoleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/MenuMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/NoticeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/NoticeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>scala-sdk-2.13.4</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>hrms-web</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="project.hrms.start.entity.Employ" memberName="role" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

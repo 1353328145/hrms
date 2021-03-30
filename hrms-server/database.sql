@@ -2,23 +2,25 @@ use hrm;
 -- 3.24
 -- 员工表
 create table employ(
+    -- 基本信息
     uid bigint primary key, -- 工号
     password char (100), -- 密码
     sex tinyint,  -- 性别 0 男 1 女
     name char(10), -- 姓名
     phone char(20), -- 手机
-    address char(30), -- 联系地址
+    email char(30), -- 邮件
+    birthday date, -- 生日 ——> 年龄
+    img_key char(60), -- 照片
     national char(10), -- 民族
+    -- 不可修改的
+    address char(30), -- 联系地址
     id_number char(30), -- 身份证号
     culture char(10), -- 最高学历
     school char(30), -- 毕业学校
-    email char(30), -- 邮件
     contract date, -- 合同期限
     department_id int default -1, -- 部门id
-    birthday date, -- 生日 ——> 年龄
     employ_from char(200), -- 聘用形式
     role_id int, -- 角色id
-    img_key char(60), -- 照片
     create_time datetime -- 加入时间
 );
 -- 角色表
@@ -81,6 +83,7 @@ create table notice(
     content char(250),
     create_time datetime
 );
+
 -- 打卡表
 create table sign(
     sid bigint primary key, -- 打卡id

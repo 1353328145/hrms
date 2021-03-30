@@ -87,7 +87,7 @@
               layout="total,prev, pager, next,jumper"
               :pager-count="5"
               :total="noticeTable.total"
-              :page-size="30">
+              :page-size="10">
             </el-pagination>
           </el-row>
         </el-col>
@@ -220,7 +220,7 @@ export default {
     },
     handleChange(num){
       this.noticeTable.pageNum = num;
-      this.loadDpList();
+      this.loadNoticeList();
     },
     async loadNoticeList() {
       const res = await this.$http.get('notice/crud/' + this.noticeTable.pageNum, {

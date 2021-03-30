@@ -8,6 +8,7 @@ import Info from  '../components/info/Info'
 import Employ from "../components/employ/Employ";
 import Framework from '../components/framework/Framework'
 import MsgPush from "../components/msg/MsgPush";
+import InfoUpdate from "../components/employ/InfoUpdate";
 Vue.use(Router);
 
 const router= new Router({
@@ -24,7 +25,9 @@ const router= new Router({
         {path: '/home/info', component: Info},
         {path: '/home/user', component: Employ},
         {path: '/home/framework', component: Framework},
-        {path: '/home/msg', component: MsgPush}
+        {path: '/home/msg', component: MsgPush},
+        {path: '/home/employ_info',component: InfoUpdate},
+        {path: '/home/attendance',component: InfoUpdate},
       ]
     }
   ]

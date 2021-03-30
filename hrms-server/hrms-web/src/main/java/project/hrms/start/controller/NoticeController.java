@@ -21,7 +21,7 @@ public class NoticeController {
         if (pageNum==null){
             pageNum=1;
         }
-        PageHelper.startPage(pageNum,30);
+        PageHelper.startPage(pageNum,10);
         //查询
         List<Notice> result = noticeServiceInterface.getAllByTitle(notice);
         PageInfo<Notice> pageInfo=new PageInfo<>(result);

@@ -22,7 +22,7 @@
 
           </div>
         </el-col>
-        <el-col :span="12">
+        <el-col :span="12" style="height: 100%">
           <el-row>
             <el-switch
               v-model="reverse"
@@ -30,11 +30,11 @@
               inactive-text="正序排列">
             </el-switch>
           </el-row>
-          <el-row style="margin-top: 20px">
+          <div style="margin-top: 20px">
             <h3>通知</h3>
-          </el-row>
-          <el-row style="margin-top: 20px">
-            <el-timeline :reverse="reverse">
+          </div>
+          <div id="notice">
+            <el-timeline :reverse="reverse" style="margin-top: 10px">
                   <el-timeline-item
                     v-for="(item, index) in noticeList"
                     :key="index"
@@ -43,13 +43,12 @@
                       :url="item.employ.imgKey"
                       :employName="item.employ.name"
                       :roleName="item.employRoleName">
-
                     </EmployInfoInline>
                     {{item.content}}
                   </el-timeline-item>
-                </el-timeline>
-          </el-row>
-          <el-row>
+            </el-timeline>
+          </div>
+          <el-row style="margin-top: 10px">
             <el-pagination
               @current-change="handleChange"
               :current-page.sync="noticeTable.pageNum"
@@ -57,7 +56,7 @@
               layout="total,prev, pager, next,jumper"
               :pager-count="5"
               :total="noticeTable.total"
-              :page-size="30">
+              :page-size="10">
             </el-pagination>
           </el-row>
         </el-col>
@@ -90,8 +89,9 @@ export default {
     }
   },
   methods:{
-    handleChange(){
-
+    handleChange(num){
+      this.noticeTable.pageNum = num;
+      this.loadNoticeList();
     },
     /**
      * 图表
@@ -172,5 +172,9 @@ export default {
   }
   #info{
     height: 300px
+  }
+  #notice{
+    overflow: auto;
+    height: 400px;
   }
 </style>
