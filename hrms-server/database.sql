@@ -88,9 +88,13 @@ create table notice(
 create table sign(
     sid bigint primary key, -- 打卡id
     uid bigint not null, -- 打卡人
-    status tinyint default 1,-- 状态
-    -- 1. 正常
-    -- 2. 迟到
-    img_key char(60), -- 打卡照片
-    create_time datetime -- 打卡时间
+
+    sign_in datetime, -- 签到时间
+    sign_in_img char(60), -- 打卡照片
+
+    sign_out datetime, -- 签退时间
+    sign_out_img char(60), -- 打卡照片
+
+    create_time date, -- 打卡日期
+    status char(10) default '未签退'-- 打卡状态 正常/迟到/未签退/请假/旷工
 )

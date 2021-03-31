@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>签到</title>
@@ -9,6 +9,139 @@
     <script src="/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <button class="btn btn-info">123</button>
+<div class="container">
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-sm">
+<!--            导航-->
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-link active" id="home" data-toggle="tab" href="#sign" role="tab" aria-controls="nav-home" aria-selected="true">打卡</a>
+                <a class="nav-link" id="count" data-toggle="tab" href="#handle" role="tab" aria-controls="nav-profile" aria-selected="false">统计</a>
+            </div>
+
+
+            <div class="tab-content" id="pills-tabContent">
+                <!-- 打卡 -->
+                <div class="tab-pane fade show active" id="sign" role="tabpanel" aria-labelledby="home">
+                    <!--用户信息  -->
+                    <div class="row box">
+                        <div class="col-sm">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div>
+                                        <span>
+                                            <img src="#" class="rounded-circle" style="height: 50px;">
+                                        </span>
+                                        <span class="text" style="margin-left: 10px;" th:text="${employ.name}">
+
+                                        </span>
+                                    </div>
+                                    <div style="float: right;" class="text">
+                                        2021-3-30 20:51
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row box">
+                        <div class="col-sm">
+                            我的考勤
+                        </div>
+                    </div>
+                    <!-- 打卡框 -->
+                    <div class="row box">
+                        <div class="col-sm">
+                            <div class="card">
+                                <div class="card-body">
+                                    <!-- 规定签到、签退时间 -->
+
+                                    <div class="text">规定签到时间 10:10</div>
+                                    <div class="text">规定签退时间 10:10</div>
+
+                                    <!-- 打卡按钮 -->
+                                    <div style="margin: 20px;">
+                                        <button id="signBtn" class="btn btn-outline-success" data-toggle="modal" data-target="#upload">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-flag-fill" viewBox="0 0 16 16">
+                                                <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001"/>
+                                            </svg>
+                                            打卡
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" tabindex="-1" id="upload">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">上传你的打卡照片</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="uploadForm">
+                                        <input type="file" class="form-control-file" id="file" name="file">
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关 闭</button>
+                                    <button type="button" class="btn btn-primary" onclick="upload()">上 传</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane fade" id="handle" role="tabpanel" aria-labelledby="count">
+                    统计
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 </body>
+<script>
+    function upload() {
+        let formObj = $("#uploadForm")
+        let formData = new FormData(formObj[0]);
+        $.ajax({
+            url:'toSign',
+            method:'post',
+            data:formData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (data) {
+               console.log(data);
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        })
+        console.log(file);
+    }
+</script>
+<style>
+    .text{
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(69, 70, 70);
+    }
+    .box{
+        padding: 10px;
+        margin-top: 5px;
+    }
+    #signBtn{
+        display: block;
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        margin: auto;
+    }
+</style>
 </html>
