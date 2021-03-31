@@ -32,7 +32,7 @@ public class SignService implements SignServiceInterface{
             return signIn(sign);
         }else if (toDay.getSignIn()!=null&&toDay.getSignOut()==null){
             //签退
-            sign.setSignOutImg(key);
+            toDay.setSignOutImg(key);
             return signOut(toDay);
         }else{
             return false;

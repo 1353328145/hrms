@@ -1,6 +1,7 @@
 package project.hrms.start.controller;
 
 import com.jexing.cup.ImageStore;
+import com.jexing.cup.exception.FileTypeNotSupportedException;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
@@ -12,11 +13,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import project.hrms.start.entity.Employ;
+import project.hrms.start.entity.Sign;
 import project.hrms.start.parameter.Msg;
-import project.hrms.start.service.EmployService;
 import project.hrms.start.service.EmployServiceInterface;
+import project.hrms.start.service.SignServiceInterface;
 
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 
 @Controller
 @RequestMapping("sign")
@@ -25,6 +28,8 @@ public class SignController {
     @Autowired
     private EmployServiceInterface employServiceInterface;
 
+    @Autowired
+    private SignServiceInterface signService;
     @Autowired
     private ImageStore store;
     @RequestMapping()
@@ -55,12 +60,26 @@ public class SignController {
         return "index";
     }
 
+    @PostMapping("file")
+    @ResponseBody
+    public Msg file(MultipartFile file){
+        String key = null;
+        try {
+            key =store.putObj(file.getInputStream(),file.getContentType());
+        } catch (FileTypeNotSupportedException | IOException e) {
+            e.printStackTrace();
+        }
+        return key == null? Msg.fail():Msg.success().add("key",key);
+    }
     @PostMapping("toSign")
     @ResponseBody
-    public Msg sign(MultipartFile file,String id){
-        System.out.println(file.getContentType());
-        System.out.println(id);
-        return Msg.success();
+    public Msg toSign(Long uid,String key){
+        if (uid==null||key==null){
+            return Msg.fail();
+        }
+        Sign sign = new Sign();
+        sign.setUid(uid);
+        return signService.sign(sign,key)?Msg.success():Msg.fail();
     }
 
     @GetMapping("findByUid/{uid}")

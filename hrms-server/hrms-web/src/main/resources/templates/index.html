@@ -82,8 +82,9 @@
                                 </div>
                                 <div class="modal-body">
                                     <form id="uploadForm">
-                                        <input type="file" class="form-control-file" id="file" name="file">
+                                        <input type="file" id="file" name="file">
                                     </form>
+                                    <input type="hidden" id="uid" th:value="${employ.uid}">
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">关 闭</button>
@@ -105,23 +106,42 @@
 </div>
 </body>
 <script>
+    sessionStorage.setItem("uid",$("#uid").val())
     function upload() {
         let formObj = $("#uploadForm")
         let formData = new FormData(formObj[0]);
         $.ajax({
-            url:'toSign',
+            url:'file',
             method:'post',
-            data:formData,
+            data: formData,
             async: false,
             cache: false,
             contentType: false,
             processData: false,
             success: function (data) {
-               console.log(data);
+               if (data.flag){
+                   let uid = $("#uid").val();
+                   let key = data.extend.key;
+                   $.ajax({
+                       url:'toSign',
+                       method: 'post',
+                       data:{
+                           uid:uid,
+                           key:key
+                       },
+                       success(info){
+                           if(info.flag){
+                               alert("打卡成功")
+                           }else{
+                               alert("打卡失败")
+                           }
+                       }
+                   })
+                   $("#upload").modal('hide');
+               }else{
+                   alert("上传失败")
+               }
             },
-            error: function (data) {
-                console.log(data);
-            }
         })
         console.log(file);
     }

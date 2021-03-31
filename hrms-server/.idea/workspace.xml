@@ -13,30 +13,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2be4938-f5b2-43d5-b40b-132766b072f3" name="Default Changelist" comment="个人信息修改">
-      <change afterPath="$PROJECT_DIR$/.idea/EasyCodeConfig/hrm-sign.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/SignMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/SignMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-model/src/main/java/project/hrms/start/entity/Sign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/component/SignRule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/SignService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/SignServiceInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/css/fileinput.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/img/loading-sm.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/img/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/js/fileinput.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/time.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/test/java/project/hrms/start/TimeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="b2be4938-f5b2-43d5-b40b-132766b072f3" name="Default Changelist" comment="打卡。。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/component/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/component/Company.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/SignController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/SignController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-web/src/main/resources/static/img/loading-sm.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-web/src/main/resources/static/img/loading.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/hrms-web/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-web/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-web/src/test/java/project/hrms/start/TestAythority.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-web/src/test/java/project/hrms/start/TestAythority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-web/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-web/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +182,7 @@
       <workItem from="1616995655966" duration="4324000" />
       <workItem from="1617001161373" duration="175000" />
       <workItem from="1617001935083" duration="13032000" />
-      <workItem from="1617076967004" duration="35822000" />
+      <workItem from="1617076967004" duration="39610000" />
     </task>
     <task id="LOCAL-00001" summary="权限模块开发">
       <created>1616673568997</created>
@@ -230,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617087579112</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="打卡。。">
+      <created>1617185850045</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1617185850045</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +243,8 @@
     <MESSAGE value="用户模块开发完毕" />
     <MESSAGE value="通知管理" />
     <MESSAGE value="个人信息修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="个人信息修改" />
+    <MESSAGE value="打卡。。" />
+    <option name="LAST_COMMIT_MESSAGE" value="打卡。。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="488" y="134" key="#Project_Structure" timestamp="1616589724587">
@@ -281,54 +271,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1181" y="382" width="440" height="464" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1617179720569" />
-    <state width="1877" height="843" key="GridCell.Tab.0.bottom" timestamp="1617185179269">
+    <state width="1877" height="377" key="GridCell.Tab.0.bottom" timestamp="1617189330879">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="843" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617185179269" />
-    <state width="1877" height="843" key="GridCell.Tab.0.center" timestamp="1617185179269">
+    <state width="1877" height="377" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617189330879" />
+    <state width="1877" height="377" key="GridCell.Tab.0.center" timestamp="1617189330879">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="843" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617185179269" />
-    <state width="1877" height="843" key="GridCell.Tab.0.left" timestamp="1617185179269">
+    <state width="1877" height="377" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617189330879" />
+    <state width="1877" height="377" key="GridCell.Tab.0.left" timestamp="1617189330878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="843" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617185179269" />
-    <state width="1877" height="843" key="GridCell.Tab.0.right" timestamp="1617185179269">
+    <state width="1877" height="377" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617189330878" />
+    <state width="1877" height="377" key="GridCell.Tab.0.right" timestamp="1617189330879">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="843" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617185179269" />
-    <state width="1877" height="843" key="GridCell.Tab.1.bottom" timestamp="1617185179269">
+    <state width="1877" height="377" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617189330879" />
+    <state width="1877" height="377" key="GridCell.Tab.1.bottom" timestamp="1617189330879">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="843" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617185179269" />
-    <state width="1877" height="843" key="GridCell.Tab.1.center" timestamp="1617185179269">
+    <state width="1877" height="377" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617189330879" />
+    <state width="1877" height="377" key="GridCell.Tab.1.center" timestamp="1617189330879">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="843" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617185179269" />
-    <state width="1877" height="843" key="GridCell.Tab.1.left" timestamp="1617185179269">
+    <state width="1877" height="377" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617189330879" />
+    <state width="1877" height="377" key="GridCell.Tab.1.left" timestamp="1617189330879">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="843" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617185179269" />
-    <state width="1877" height="843" key="GridCell.Tab.1.right" timestamp="1617185179269">
+    <state width="1877" height="377" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617189330879" />
+    <state width="1877" height="377" key="GridCell.Tab.1.right" timestamp="1617189330879">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="843" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617185179269" />
-    <state width="1877" height="444" key="GridCell.Tab.2.bottom" timestamp="1616733712697">
+    <state width="1877" height="377" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617189330879" />
+    <state width="1877" height="377" key="GridCell.Tab.2.bottom" timestamp="1617189330879">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="444" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616733712697" />
-    <state width="1877" height="444" key="GridCell.Tab.2.center" timestamp="1616733712697">
+    <state width="1877" height="377" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617189330879" />
+    <state width="1877" height="377" key="GridCell.Tab.2.center" timestamp="1617189330879">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="444" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616733712697" />
-    <state width="1877" height="444" key="GridCell.Tab.2.left" timestamp="1616733712697">
+    <state width="1877" height="377" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617189330879" />
+    <state width="1877" height="377" key="GridCell.Tab.2.left" timestamp="1617189330879">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="444" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616733712697" />
-    <state width="1877" height="444" key="GridCell.Tab.2.right" timestamp="1616733712697">
+    <state width="1877" height="377" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617189330879" />
+    <state width="1877" height="377" key="GridCell.Tab.2.right" timestamp="1617189330879">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="444" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616733712697" />
+    <state width="1877" height="377" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617189330879" />
     <state width="220" height="539" key="HiddenNamespacesPopup" timestamp="1617164580153">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -341,10 +331,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="278" y="187" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1617009878170" />
-    <state x="801" y="357" key="Vcs.Push.Dialog.v2" timestamp="1617087584578">
+    <state x="801" y="357" key="Vcs.Push.Dialog.v2" timestamp="1617186064754">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="801" y="357" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1617087584578" />
+    <state x="801" y="357" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1617186064754" />
     <state x="762" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617102254168">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -367,6 +357,26 @@
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617167967809" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/SignService.java</url>
+          <line>26</line>
+          <properties class="project.hrms.start.service.SignService" method="sign">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/SignService.java</url>
+          <line>61</line>
+          <properties class="project.hrms.start.service.SignService" method="signOut">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="project.hrms.start.entity.Employ" memberName="role" />
