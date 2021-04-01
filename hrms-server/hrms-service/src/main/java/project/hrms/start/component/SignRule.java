@@ -68,7 +68,7 @@ public class SignRule {
         }
         return date;
     }
-    private int[] getFreeDate(){
+    public int[] getFreeArray(){
         int []answer =new int[free.length()];
         for (int i = 0; i < answer.length; i++) {
             answer[i] = free.charAt(i) - '0';

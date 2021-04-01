@@ -34,6 +34,21 @@
             </if>
         </where>
     </select>
+    <select id="getSignInfoByUidGroupByStatus" resultType="project.hrms.start.parameter.SignData">
+        select status,count(*) number from sign
+
+        where uid = #{uid}
+
+        and date_format (create_time,'%Y-%m') = date_format (now(),'%Y-%m')
+
+        and dayofweek(create_time) not in
+
+        <foreach collection="free" item = "i" open="(" separator="," close=")" index="index">
+            #{i}
+        </foreach>
+
+        group by `status`
+    </select>
 
 
 </mapper>

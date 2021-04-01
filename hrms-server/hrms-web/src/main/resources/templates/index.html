@@ -5,8 +5,11 @@
     <title>签到</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/layer/theme/default/layer.css"/>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/layer/layer.js"></script>
+    <script src="/laydate/laydate.js"></script>
 </head>
 <body>
 <div class="container">
@@ -15,10 +18,10 @@
 <!--            导航-->
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <a class="nav-link active" id="home" data-toggle="tab" href="#sign" role="tab" aria-controls="nav-home" aria-selected="true">打卡</a>
-                <a class="nav-link" id="count" data-toggle="tab" href="#handle" role="tab" aria-controls="nav-profile" aria-selected="false">统计</a>
+                <a class="nav-link" id="count" data-toggle="tab" href="#handle" role="tab" aria-controls="nav-profile" aria-selected="false">查询</a>
             </div>
 
-
+            <input type="hidden" id="imgKey" th:value="${employ.imgKey}">
             <div class="tab-content" id="pills-tabContent">
                 <!-- 打卡 -->
                 <div class="tab-pane fade show active" id="sign" role="tabpanel" aria-labelledby="home">
@@ -29,7 +32,7 @@
                                 <div class="card-body">
                                     <div>
                                         <span>
-                                            <img src="#" class="rounded-circle" style="height: 50px;">
+                                            <img src="#" id="headImg" class="rounded-circle" style="height: 50px;width: 50px">
                                         </span>
                                         <span class="text" style="margin-left: 10px;" th:text="${employ.name}">
 
@@ -54,8 +57,8 @@
                                 <div class="card-body">
                                     <!-- 规定签到、签退时间 -->
 
-                                    <div class="text">规定签到时间 10:10</div>
-                                    <div class="text">规定签退时间 10:10</div>
+                                    <div class="text">规定签到时间 <span th:text="${rule.in}"></span></div>
+                                    <div class="text">规定签退时间 <span th:text="${rule.out}"></span></div>
 
                                     <!-- 打卡按钮 -->
                                     <div style="margin: 20px;">
@@ -75,20 +78,20 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">上传你的打卡照片</h5>
+                                    <h5 class="modal-title">上传你的打卡照片(jpg格式)</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
                                     <form id="uploadForm">
-                                        <input type="file" id="file" name="file">
+                                        <input type="file" id="file" name="file" class="form-control-file" accept="image/jpeg">
                                     </form>
                                     <input type="hidden" id="uid" th:value="${employ.uid}">
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">关 闭</button>
-                                    <button type="button" class="btn btn-primary" onclick="upload()">上 传</button>
+                                    <button type="button" class="btn btn-primary" onclick="upload()">打 卡</button>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +100,44 @@
                 </div>
 
                 <div class="tab-pane fade" id="handle" role="tabpanel" aria-labelledby="count">
-                    统计
+                    <div class="row box">
+                        <div class="col-sm">
+                            <div class="card">
+                                <ul class="list-group list-group-flush" id="list">
+                                    <li class="list-group-item">正常签到天数:15</li>
+                                    <li class="list-group-item">迟到天数:10</li>
+                                    <li class="list-group-item">早退天数:5</li>
+                                    <li class="list-group-item">旷工天数:10</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row box">
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="dateTool" placeholder="输入日期查询某天记录">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row box">
+                        <div class="col-sm" id="infoContent">
+                            请在输入框中选择一个日期
+                            <!--<div>-->
+                                <!--签到时间: <span id="signintime"></span>-->
+                            <!--</div>-->
+                            <!--<div>-->
+                                <!--<img src="#"  class="signImg"/>-->
+                            <!--</div>-->
+                            <!--<div>-->
+                                <!--签退时间: <span id="signouttime"></span>-->
+                            <!--</div>-->
+                            <!--<div>-->
+                                <!--<img src="#"  class="signImg"/>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -106,9 +146,24 @@
 </div>
 </body>
 <script>
-    sessionStorage.setItem("uid",$("#uid").val())
+    //存uid
+    sessionStorage.setItem("uid",$("#uid").val());
+    //用户头像
+    let baseUrl = "http://localhost:8080/employ/img?key=";
+    let url = baseUrl+$("#imgKey").val();
+    $("#headImg").attr('src',url);
+    //绘制日历
+    laydate.render({
+        elem: '#dateTool'
+        ,done: function(value, date){
+            // alert('你选择的日期是：' + value + '\n获得的对象是' + JSON.stringify(date));
+            loadSignInfo(value);
+        }
+    });
+    //请求统计数据
+    countByUid();
     function upload() {
-        let formObj = $("#uploadForm")
+        let formObj = $("#uploadForm");
         let formData = new FormData(formObj[0]);
         $.ajax({
             url:'file',
@@ -131,19 +186,104 @@
                        },
                        success(info){
                            if(info.flag){
-                               alert("打卡成功")
+                               layer.alert('打卡成功', {
+                                   skin: 'layui-layer-lan'
+                                   ,closeBtn: 0
+                                   ,anim: 4 //动画类型
+                               });
                            }else{
-                               alert("打卡失败")
+                               layer.alert('打卡失败,请重试', {
+                                   skin: 'layui-layer-lan'
+                                   ,closeBtn: 0
+                                   ,anim: 4 //动画类型
+                               });
                            }
+                       },
+                       error:function () {
+                           layer.msg("网络异常")
                        }
-                   })
+                   });
                    $("#upload").modal('hide');
                }else{
-                   alert("上传失败")
+                   layer.alert('打卡失败,可能是图片上传不符合要求', {
+                       skin: 'layui-layer-lan'
+                       ,closeBtn: 0
+                       ,anim: 4 //动画类型
+                   });
                }
             },
+        });
+    }
+
+    function loadSignInfo(value) {
+        let uid = $("#uid").val();
+        $.ajax({
+            url:'load',
+            method:'get',
+            data:{
+                uid:uid,
+                date:value
+            },
+            success:function (data) {
+              if (data.flag){
+                  let obj =data.extend.info;
+                  let content = $("#infoContent");
+                  content.empty();
+                  content.append(
+                      "                            <div class='infoBox'>" +
+                      "                                <h3>"+value+"</h3>" +
+                      "                            </div>" +
+                      "                            <div class='infoBox'>" +
+                      "                                打卡状态: "+obj.status+"   " +
+                      "                            </div>" +
+                      "                            <div class='infoBox'>" +
+                      "                                签到时间: "+obj.signIn+"" +
+                      "                            </div>" +
+                      "                            <div class='infoBox'>" +
+                      "                                打卡照片" +
+                      "                            </div>" +
+                      "                            <div class='infoBox'> " +
+                      "                                <img src='"+baseUrl+obj.signInImg+"'  class='signImg'/>" +
+                      "                            </div>" +
+                      "                            <div class='infoBox'>" +
+                      "                                签退时间: "+obj.signOut+"" +
+                      "                            </div>" +
+                      "                            <div class='infoBox'>" +
+                      "                                打卡照片" +
+                      "                            </div>" +
+                      "                            <div class='infoBox'>" +
+                      "                                <img src='"+baseUrl+obj.signOutImg+"'  class='signImg'/>" +
+                      "                            </div>")
+              }else{
+                  layer.msg("没有查询到数据")
+              }
+            }
         })
-        console.log(file);
+    }
+
+    function countByUid() {
+        let uid = $("#uid").val();
+        $.ajax({
+            url:'countByUid',
+            method: 'get',
+            data:{
+                uid:uid,
+            },
+            success:function (data) {
+                let dom = $("#list");
+                dom.empty();
+                dom.append("<div class=\"card-header\">本月签到数据如下</div>");
+                if(data.flag){
+                    let arr = data.extend.count;
+                    for (let i = 0; i < arr.length; i++) {
+                        dom.append("<li class=\"list-group-item\">"+arr[i].status+":"+arr[i].number+"次</li>");
+                    }
+                }
+            },
+            error:function () {
+                layer.msg("网络异常")
+            }
+        })
     }
 </script>
 <style>
@@ -162,6 +302,13 @@
         width: 100px;
         border-radius: 50px;
         margin: auto;
+    }
+    .signImg{
+        width: 150px;
+        height: 150px;
+    }
+    .infoBox{
+        padding: 10px;
     }
 </style>
 </html>

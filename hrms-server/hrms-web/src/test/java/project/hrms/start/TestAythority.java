@@ -5,12 +5,9 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import project.hrms.start.entity.Department;
-import project.hrms.start.entity.Employ;
-import project.hrms.start.entity.Notice;
 import project.hrms.start.entity.Sign;
 import project.hrms.start.mapper.EmployMapper;
-import project.hrms.start.mapper.NoticeMapper;
+import project.hrms.start.mapper.SignMapper;
 import project.hrms.start.parameter.TreeNode;
 import project.hrms.start.service.*;
 
@@ -29,14 +26,39 @@ public class TestAythority {
 
     @Autowired
     SignServiceInterface signService;
+
+    @Autowired
+    SignMapper signMapper;
     @Test
     public void test(){
         Sign sign = new Sign();
-        sign.setUid(1374915376185331713L);
-        signService.sign(sign,null);
-        System.out.println(signService.getSignInfoByUid(1374915376185331713L));
-        signService.sign(sign,null);
-        System.out.println(signService.getSignInfoByUid(1374915376185331713L));
+        sign.setUid(1375013271916019713L);
+        signMapper.insert(sign);
+        sign = new Sign();
+        sign.setUid(1375013271916019713L);
+        signMapper.insert(sign);
+        sign = new Sign();
+        sign.setUid(1375013271916019713L);
+        signMapper.insert(sign);
+        sign = new Sign();
+        sign.setUid(1375013271916019713L);
+        signMapper.insert(sign);
+        sign = new Sign();
+        sign.setUid(1375013271916019713L);
+        signMapper.insert(sign);
+        sign = new Sign();
+        sign.setUid(1375013271916019713L);
+        signMapper.insert(sign);
+        sign = new Sign();
+        sign.setUid(1375013271916019713L);
+        signMapper.insert(sign);
+        sign = new Sign();
+        sign.setUid(1375013271916019713L);
+        signMapper.insert(sign);
+        sign = new Sign();
+        sign.setUid(1375013271916019713L);
+        signMapper.insert(sign);
+
     }
 
     @Test

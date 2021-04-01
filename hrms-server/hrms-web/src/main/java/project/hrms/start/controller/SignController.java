@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import project.hrms.start.component.SignRule;
 import project.hrms.start.entity.Employ;
 import project.hrms.start.entity.Sign;
 import project.hrms.start.parameter.Msg;
@@ -20,6 +21,7 @@ import project.hrms.start.service.SignServiceInterface;
 
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 
 @Controller
 @RequestMapping("sign")
@@ -32,6 +34,9 @@ public class SignController {
     private SignServiceInterface signService;
     @Autowired
     private ImageStore store;
+
+    @Autowired
+    private SignRule signRule;
     @RequestMapping()
     public String index(){
         return "login";
@@ -57,12 +62,16 @@ public class SignController {
         Employ crrent = employServiceInterface.getEmployByUid(uid);
         session.setAttribute("employ",crrent);
         model.addAttribute("employ",crrent);
+        model.addAttribute("rule",signRule);
         return "index";
     }
 
     @PostMapping("file")
     @ResponseBody
     public Msg file(MultipartFile file){
+        if (file == null || !file.getContentType().equals("image/jpeg")){
+            return Msg.fail();
+        }
         String key = null;
         try {
             key =store.putObj(file.getInputStream(),file.getContentType());
@@ -71,6 +80,7 @@ public class SignController {
         }
         return key == null? Msg.fail():Msg.success().add("key",key);
     }
+
     @PostMapping("toSign")
     @ResponseBody
     public Msg toSign(Long uid,String key){
@@ -82,11 +92,36 @@ public class SignController {
         return signService.sign(sign,key)?Msg.success():Msg.fail();
     }
 
+    /**
+     * 统计一个月的次数
+     * @param uid
+     * @return
+     */
+    @GetMapping("countByUid")
+    @ResponseBody
+    public Msg count(Long uid){
+        if (uid==null){
+            return Msg.fail();
+        }
+        return Msg.success().add("count",signService.countByUid(uid));
+    }
+
+    @GetMapping("load")
+    @ResponseBody
+    public Msg load(Long uid,String date){
+        if (uid==null || date == null){
+            return Msg.fail();
+        }
+        List<Sign> list = signService.getSignInfoByUid(uid, date);
+        return list == null ||list.size() == 0?Msg.fail():Msg.success().add("info",list.get(0));
+    }
+
     @GetMapping("findByUid/{uid}")
     @ResponseBody
     public Msg findByUid(@PathVariable("uid")Long uid){
         Employ employ =employServiceInterface.getEmployByUid(uid);
         return employ == null?Msg.fail():Msg.success().add("employ",employ);
     }
+
 
 }

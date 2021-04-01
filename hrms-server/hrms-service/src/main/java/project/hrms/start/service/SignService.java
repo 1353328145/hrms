@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import project.hrms.start.component.SignRule;
 import project.hrms.start.entity.Sign;
 import project.hrms.start.mapper.SignMapper;
+import project.hrms.start.parameter.SignData;
 
 import javax.xml.crypto.Data;
 import java.text.ParseException;
@@ -62,12 +63,23 @@ public class SignService implements SignServiceInterface{
     private boolean signOut(Sign sign) {
         //签到时间
         Date signOut = new Date();
+        long currentTime = signOut.getTime();
+        long time = signRule.getSignOutTime().getTime();
         sign.setSignOut(signOut);
-        if (sign.getStatus().equals("未签退")){
-            sign.setStatus("正常");
-        }
-        if (sign.getStatus().contains("迟到")){
-            sign.setStatus("迟到");
+        if (time - currentTime > 7200000){
+            sign.setStatus("旷工");
+        }else if (sign.getStatus().equals("未签退")){
+            if (currentTime < time){
+                sign.setStatus("早退");
+            }else{
+                sign.setStatus("正常");
+            }
+        }else if (sign.getStatus().contains("迟到")){
+            if (currentTime < time){
+                sign.setStatus("迟到#早退");
+            }else{
+                sign.setStatus("迟到");
+            }
         }
         return signMapper.updateById(sign) > 0;
     }
@@ -95,6 +107,11 @@ public class SignService implements SignServiceInterface{
         sign.setUid(uid);
         sign.setCreateTime(date);
         return signMapper.getSignInfoByUid(sign);
+    }
+
+    @Override
+    public List<SignData> countByUid(Long uid) {
+        return signMapper.getSignInfoByUidGroupByStatus(uid,signRule.getFreeArray());
     }
 
     private Date getDate(){
