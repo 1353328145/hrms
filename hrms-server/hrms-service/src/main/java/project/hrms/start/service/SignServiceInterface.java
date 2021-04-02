@@ -18,4 +18,10 @@ public interface SignServiceInterface {
     List<Sign> getSignInfoByUid(Long uid,String time);
     //加载本月数据
     List<SignData> countByUid(Long uid);
+    //今天打卡人数
+    int countTodaySignInNumber();
+    //某月某用户所有记录
+    List<Sign> getAllByUidAndMonth(String date,Long uid);
+
+    boolean leave(Sign sign);
 }

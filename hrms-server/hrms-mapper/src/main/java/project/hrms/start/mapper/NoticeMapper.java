@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface NoticeMapper extends BaseMapper<Notice> {
     List<Notice> getAllByTitle(Notice notice);
+
+    Notice getOneRecent();
 }

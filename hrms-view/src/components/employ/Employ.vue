@@ -2,8 +2,8 @@
   <div>
     <el-row>
       <el-breadcrumb separator="/">
-        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item><a href="/">员工信息管理</a></el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/home/main' }">首页</el-breadcrumb-item>
+        <el-breadcrumb-item>员工信息管理</el-breadcrumb-item>
       </el-breadcrumb>
     </el-row>
       <el-row style="margin-top: 5px">
@@ -494,7 +494,6 @@ export default {
         cancelButtonText: '取消',
         type: 'warning'
       }).then(() => {
-        console.log(this.updateDepartment)
           this.$http.put("employ/em",this.updateDepartment).then(res =>{
             if (res.status===200){
               if (res.data.flag){

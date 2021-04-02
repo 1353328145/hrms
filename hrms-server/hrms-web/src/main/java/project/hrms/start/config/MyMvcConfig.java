@@ -30,6 +30,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
                         "/css/**",
                         "/layer/**",
                         "/laydate/**",
+                        "/lay/**",
                         "/employ/img");//不拦截的路径
     }
 

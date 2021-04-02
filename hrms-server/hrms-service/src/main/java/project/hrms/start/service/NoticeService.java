@@ -34,4 +34,9 @@ public class NoticeService implements NoticeServiceInterface{
         notice.setCreateTime(new Date());
         return noticeMapper.insert(notice) > 0;
     }
+
+    @Override
+    public Notice getOne() {
+        return noticeMapper.getOneRecent();
+    }
 }

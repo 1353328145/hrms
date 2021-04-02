@@ -9,4 +9,5 @@ public interface NoticeServiceInterface {
     boolean delete(Integer id);
     boolean update(Notice notice);
     boolean insert(Notice notice);
+    Notice getOne();
 }

@@ -32,4 +32,14 @@
         </where>
         order by n.create_time desc
     </select>
+    <select id="getOneRecent" resultMap="NoticeMap">
+        select n.*,
+               e.name name,
+               e.img_key imgKey,
+               r.role_name roleName
+        from notice n
+                 left join employ e on n.uid = e.uid
+                 left join role r on r.rid = e.role_id
+        ORDER BY n.create_time DESC LIMIT 1
+    </select>
 </mapper>

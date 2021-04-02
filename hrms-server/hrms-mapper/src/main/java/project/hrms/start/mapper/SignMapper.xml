@@ -49,6 +49,26 @@
 
         group by `status`
     </select>
+    <select id="countTodaySignInNumber" resultType="java.lang.Integer">
+        select count(*) from sign
+
+        where create_time = date_format (now(),'%Y-%m-%d')
+    </select>
+    <select id="getAllByUidAndMonth" resultMap="SignMap">
+        select s.*,
+        e.name name,
+        e.phone phone,
+        e.email email,
+        e.img_key imgKey
+        from sign s
+        left join employ e on s.uid = e.uid
+        <where>
+            and s.uid = #{uid}
+            <if test="createTime != null">
+                and date_format (s.create_time,'%Y-%m') = date_format (#{createTime},'%Y-%m')
+            </if>
+        </where>
+    </select>
 
 
 </mapper>

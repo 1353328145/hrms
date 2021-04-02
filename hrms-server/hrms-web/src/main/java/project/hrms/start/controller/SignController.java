@@ -17,10 +17,13 @@ import project.hrms.start.entity.Employ;
 import project.hrms.start.entity.Sign;
 import project.hrms.start.parameter.Msg;
 import project.hrms.start.service.EmployServiceInterface;
+import project.hrms.start.service.NoticeService;
+import project.hrms.start.service.NoticeServiceInterface;
 import project.hrms.start.service.SignServiceInterface;
 
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -32,6 +35,9 @@ public class SignController {
 
     @Autowired
     private SignServiceInterface signService;
+
+    @Autowired
+    private NoticeServiceInterface noticeServiceInterface;
     @Autowired
     private ImageStore store;
 
@@ -43,7 +49,7 @@ public class SignController {
     }
 
     @RequestMapping(value = "login",method = RequestMethod.POST)
-    public String Login(Employ employ, Model model, HttpSession session){
+    public String Login(Employ employ, Model model){
         Long uid = employ.getUid();
         String password = employ.getPassword();
         if (uid == null || password == null){
@@ -60,9 +66,9 @@ public class SignController {
             return "login";
         }
         Employ crrent = employServiceInterface.getEmployByUid(uid);
-        session.setAttribute("employ",crrent);
         model.addAttribute("employ",crrent);
         model.addAttribute("rule",signRule);
+        model.addAttribute("notice",noticeServiceInterface.getOne());
         return "index";
     }
 
@@ -106,6 +112,12 @@ public class SignController {
         return Msg.success().add("count",signService.countByUid(uid));
     }
 
+    /**
+     * 某一天的数据
+     * @param uid
+     * @param date
+     * @return
+     */
     @GetMapping("load")
     @ResponseBody
     public Msg load(Long uid,String date){
@@ -116,12 +128,30 @@ public class SignController {
         return list == null ||list.size() == 0?Msg.fail():Msg.success().add("info",list.get(0));
     }
 
-    @GetMapping("findByUid/{uid}")
+
+    @GetMapping("countToday")
     @ResponseBody
-    public Msg findByUid(@PathVariable("uid")Long uid){
-        Employ employ =employServiceInterface.getEmployByUid(uid);
-        return employ == null?Msg.fail():Msg.success().add("employ",employ);
+    public Msg countToday(){
+        return Msg.success().add("count",signService.countTodaySignInNumber());
     }
-
-
+    @GetMapping("rule")
+    @ResponseBody
+    public Msg getRule(){
+        return Msg.success().add("rule",signRule);
+    }
+    /**
+     * 某个月的数据
+     *
+     */
+    @GetMapping("loadByMonth/{uid}")
+    @ResponseBody
+    public Msg loadByMonth(String createTime,@PathVariable("uid") Long uid){
+        List<Sign> data = signService.getAllByUidAndMonth(createTime, uid);
+        return data == null?Msg.fail():Msg.success().add("sign",data);
+    }
+    @PutMapping("leave")
+    @ResponseBody
+    public Msg leave(@RequestBody Sign sign){
+        return signService.leave(sign)?Msg.success():Msg.fail();
+    }
 }

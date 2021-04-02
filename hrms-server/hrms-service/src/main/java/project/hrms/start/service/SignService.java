@@ -114,6 +114,37 @@ public class SignService implements SignServiceInterface{
         return signMapper.getSignInfoByUidGroupByStatus(uid,signRule.getFreeArray());
     }
 
+    @Override
+    public int countTodaySignInNumber() {
+        return signMapper.countTodaySignInNumber();
+    }
+
+    @Override
+    public List<Sign> getAllByUidAndMonth(String date, Long uid) {
+        if (date == null || uid == null){
+            return null;
+        }
+        Date d = null;
+        try {
+            d = new SimpleDateFormat("yyyy-MM-dd").parse(date);
+        } catch (ParseException e) {
+            return null;
+        }
+        Sign sign =new Sign();
+        sign.setUid(uid);
+        sign.setCreateTime(d);
+        return signMapper.getAllByUidAndMonth(sign);
+    }
+
+    @Override
+    public boolean leave(Sign sign) {
+        if (sign.getSid() == null){
+            return false;
+        }
+        sign.setStatus("请假");
+        return signMapper.updateById(sign)>0;
+    }
+
     private Date getDate(){
         Date date = null;
         try {

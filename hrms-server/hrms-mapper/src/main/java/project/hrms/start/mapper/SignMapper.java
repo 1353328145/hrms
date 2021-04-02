@@ -14,4 +14,7 @@ public interface SignMapper extends BaseMapper<Sign> {
     //查询某用户本月的签到记录次数汇总
     List<SignData> getSignInfoByUidGroupByStatus(Long uid,int[] free);
 
+    Integer countTodaySignInNumber();
+
+    List<Sign> getAllByUidAndMonth(Sign sign);
 }

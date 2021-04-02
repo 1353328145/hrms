@@ -2,8 +2,8 @@
   <div>
     <el-row>
       <el-breadcrumb separator="/">
-        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item><a href="/">公告管理</a></el-breadcrumb-item>
+        <el-breadcrumb-item>首页</el-breadcrumb-item>
+        <el-breadcrumb-item>公告管理</el-breadcrumb-item>
       </el-breadcrumb>
     </el-row>
     <el-card style="margin-top: 20px">

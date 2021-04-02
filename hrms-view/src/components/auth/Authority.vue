@@ -2,8 +2,8 @@
   <el-row style="height: 100%;width: 100%">
         <el-row>
           <el-breadcrumb separator="/">
-            <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-            <el-breadcrumb-item><a href="/">权限管理</a></el-breadcrumb-item>
+            <el-breadcrumb-item :to="{ path: '/home/main' }">首页</el-breadcrumb-item>
+            <el-breadcrumb-item>权限管理</el-breadcrumb-item>
           </el-breadcrumb>
         </el-row>
         <el-row style="margin-top: 20px">
