@@ -6,6 +6,7 @@
             <span>人力资源后台管理系统</span>
           </div>
           <div>
+            <el-button type="warning" round size="small" @click="logout">登出</el-button>
           </div>
         </el-header>
         <el-container>
@@ -63,6 +64,7 @@
 
         },
         logout : function (){
+          this.$router.push("/login");
         }
       },
       created() {

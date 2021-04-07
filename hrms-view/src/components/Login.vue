@@ -26,8 +26,8 @@
         data(){
           return {
             form:{
-              uid :"1374915376185331713",
-              password: "mimashi123"
+              uid :"",
+              password: ""
             },
             rules:{
               uid: [
