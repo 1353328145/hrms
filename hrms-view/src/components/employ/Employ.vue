@@ -276,7 +276,7 @@
               :on-exceed="handleExceed"
               :on-success="handleUploadSuccess"
               :on-error="handleUploadError"
-              ::file-list="fileList"
+              :file-list="fileList"
               name="file"
               :auto-upload="false">
                 <el-button size="small" type="primary">点击上传</el-button>
@@ -433,10 +433,10 @@ export default {
       const isJPG = file.type === 'image/jpeg';
       const isLt2M = file.size < 1024 * 1024 * 2;
       if (!isJPG) {
-        this.$message.error('上传商品图片只能是 JPG 格式!');
+        this.$message.error('上传图片只能是 JPG 格式!');
       }
       if (!isLt2M) {
-        this.$message.error('上传商品图片大小不能超过 2M');
+        this.$message.error('上传图片大小不能超过 2M');
       }
       return isJPG && isLt2M;
     },

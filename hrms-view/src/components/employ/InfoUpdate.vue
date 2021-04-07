@@ -18,29 +18,34 @@
           </el-form>
         </el-row>
         <hr>
-        <el-form label-position="left" ref="employUpdateForm" label-width="80px" :model="employForSubmit" :rules="rules">
-          <el-form-item label="姓名" prop="name">
-            <el-input v-model="employForSubmit.name"></el-input>
-          </el-form-item>
-          <el-form-item label="性别" prop="sex">
-            <el-radio v-model="employForSubmit.sex" :label="0">男</el-radio>
-            <el-radio v-model="employForSubmit.sex" :label="1">女</el-radio>
-          </el-form-item>
-          <el-form-item label="手机号码" prop="phone">
-            <el-input v-model="employForSubmit.phone"></el-input>
-          </el-form-item>
-          <el-form-item label="邮箱" prop="email">
-            <el-input v-model="employForSubmit.email" type="email"></el-input>
-          </el-form-item>
-          <el-form-item label="民族" prop="national">
-            <el-input v-model="employForSubmit.national"></el-input>
-          </el-form-item>
-          <el-form-item>
-            <el-button type="success" plain @click="otherInfoUpdate">
-              <i class="el-icon-circle-check">保存</i>
-            </el-button>
-          </el-form-item>
-        </el-form>
+        <el-row>
+          <el-form label-position="left" ref="employUpdateForm" label-width="80px" :model="employForSubmit" :rules="rules">
+            <el-form-item label="头像修改">
+              <el-button type="primary" icon="el-icon-picture-outline" size="small" @click="openDrawer">头像上传</el-button>
+            </el-form-item>
+            <el-form-item label="姓名" prop="name">
+              <el-input v-model="employForSubmit.name"></el-input>
+            </el-form-item>
+            <el-form-item label="性别" prop="sex">
+              <el-radio v-model="employForSubmit.sex" :label="0">男</el-radio>
+              <el-radio v-model="employForSubmit.sex" :label="1">女</el-radio>
+            </el-form-item>
+            <el-form-item label="手机号码" prop="phone">
+              <el-input v-model="employForSubmit.phone"></el-input>
+            </el-form-item>
+            <el-form-item label="邮箱" prop="email">
+              <el-input v-model="employForSubmit.email" type="email"></el-input>
+            </el-form-item>
+            <el-form-item label="民族" prop="national">
+              <el-input v-model="employForSubmit.national"></el-input>
+            </el-form-item>
+            <el-form-item>
+              <el-button type="success" plain @click="otherInfoUpdate">
+                <i class="el-icon-circle-check">保存</i>
+              </el-button>
+            </el-form-item>
+          </el-form>
+        </el-row>
       </el-col>
       <el-col :span="12">
         <el-card shadow="never" style="height: 560px">
@@ -51,7 +56,7 @@
             工号:{{employ.uid}}
           </div>
           <div class="text item">
-            部门:{{employ.department === null? '暂无部门':employ.department.name}}
+            部门:{{employ.department === null || employ.department == undefined? '暂无部门':employ.department.name}}
           </div>
           <div class="text item">
             身份证号:{{employ.idNumber}}
@@ -77,6 +82,48 @@
         </el-card>
       </el-col>
     </el-row>
+
+    <el-drawer
+      title="照片查看与上传"
+      :visible.sync="imageDrawer"
+      :with-header="false">
+      <span>
+        <el-row style="margin-top: 10%" class="img">
+          <el-image
+            style="width: 300px; height: 300px"
+            :src="url"
+            fit="contain">
+             <div slot="error" class="image-slot">
+              还没有上传图片
+            </div>
+          </el-image>
+        </el-row>
+        <el-row class="img">
+            <el-upload
+              ref="imgUploadRef"
+              :action="imgUploadUrl"
+              :before-upload="beforeUpload"
+              :before-remove="beforeRemove"
+              :headers="importHeaders"
+              multiple
+              :limit="1"
+              :on-exceed="handleExceed"
+              :on-success="handleUploadSuccess"
+              :on-error="handleUploadError"
+              :file-list="fileList"
+              name="file"
+              :auto-upload="false">
+                <el-button size="small" type="primary">点击上传</el-button>
+                <div slot="tip" class="el-upload__tip">只能上传jpg文件，且不超过2M</div>
+              </el-upload>
+        </el-row>
+        <el-row class="img">
+          <el-button type="success" @click="uploadImg">
+              提交图片
+          </el-button>
+        </el-row>
+      </span>
+    </el-drawer>
   </el-card>
 </template>
 
@@ -85,6 +132,17 @@ export default {
   name: "InfoUpdate",
   data(){
     return{
+      imageDrawer:false,
+      imgUploadUrl:'http://localhost:8080/employ/img',
+      importHeaders: {
+        token:window.sessionStorage.getItem("token")
+      },
+      url:'',
+      fileList:[],
+      headImg:{
+        uid:'',
+        imgKey:''
+      },
       employ:{},
       employForSubmit:{
         uid:'',
@@ -135,6 +193,59 @@ export default {
     }
   },
   methods:{
+    //删除之前
+    beforeRemove(){
+      return true;
+    },
+    //上传之前
+    beforeUpload(file){
+      const isJPG = file.type === 'image/jpeg';
+      const isLt2M = file.size < 1024 * 1024 * 2;
+      if (!isJPG) {
+        this.$message.error('上传图片只能是 JPG 格式!');
+      }
+      if (!isLt2M) {
+        this.$message.error('上传图片大小不能超过 2M');
+      }
+      return isJPG && isLt2M;
+    },
+    //文件超出个数限制时的钩子
+    handleExceed(){
+      this.$message.error("只能选择1个图片上传");
+    },
+    handleUploadSuccess(res){
+      if (res.flag){
+        this.headImg.imgKey = res.extend.key;
+        this.$http.put('employ/updateImgKey',this.headImg).then(res =>{
+          if (res.status === 200){
+            this.imageDrawer = false;
+            this.$message.success("上传成功")
+            this.loadEmployData();
+          }else{
+            this.$message.warning("上传失败")
+          }
+        })
+      }else{
+        this.$message.warning("上传失败")
+      }
+    },
+    //上传失败
+    handleUploadError(){
+      this.$message.error("上传出现问题...");
+    },
+    uploadImg(){
+      this.$refs.imgUploadRef.submit();
+    },
+    openDrawer(){
+      this.fileList = [];
+      this.$http.get("employ/getImg?key="+this.employ.imgKey).then(res =>{
+        if (res.data.flag){
+          this.url = res.data.extend.img;
+        }
+      })
+      this.imageDrawer = true;
+      this.headImg.uid = this.employ.uid;
+    },
     updatePassword(){
       this.$refs.updatePasswordForm.validate((valid) => {
         if (valid) {
@@ -239,5 +350,10 @@ export default {
 
 .item {
   padding: 16px;
+}
+
+.img{
+  margin-left: 30px;
+  margin-top: 30px;
 }
 </style>

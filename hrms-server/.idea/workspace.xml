@@ -13,51 +13,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2be4938-f5b2-43d5-b40b-132766b072f3" name="Default Changelist" comment="打卡。。.">
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/colorpicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/flow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/laydate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/layedit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/laypage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/laytpl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/rate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/transfer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/lay/modules/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/static/lay/layui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="b2be4938-f5b2-43d5-b40b-132766b072f3" name="Default Changelist" comment="打卡模块完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/NoticeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/NoticeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/NoticeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/NoticeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/SignMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/SignMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/SignMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-mapper/src/main/java/project/hrms/start/mapper/SignMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/NoticeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/NoticeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/NoticeServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/NoticeServiceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/SignService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/SignService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/SignServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-service/src/main/java/project/hrms/start/service/SignServiceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/config/MyMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/config/MyMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/SignController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-web/src/main/java/project/hrms/start/controller/SignController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-web/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-web/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrms-web/src/main/resources/time.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-web/src/main/resources/time.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hrms-view/src/components/auth/Authority.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../hrms-view/src/components/auth/Authority.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hrms-view/src/components/employ/Employ.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../hrms-view/src/components/employ/Employ.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hrms-view/src/components/framework/Framework.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../hrms-view/src/components/framework/Framework.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hrms-view/src/components/info/Info.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../hrms-view/src/components/info/Info.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hrms-view/src/components/msg/MsgPush.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../hrms-view/src/components/msg/MsgPush.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hrms-view/src/components/sign/Sign.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../hrms-view/src/components/sign/Sign.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hrms-view/src/components/employ/InfoUpdate.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../hrms-view/src/components/employ/InfoUpdate.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +66,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../codehome/class-manager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hrms-view" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -210,7 +169,11 @@
       <workItem from="1617001935083" duration="13032000" />
       <workItem from="1617076967004" duration="39844000" />
       <workItem from="1617255190024" duration="20200000" />
-      <workItem from="1617343284858" duration="5537000" />
+      <workItem from="1617343284858" duration="5748000" />
+      <workItem from="1617349438473" duration="112000" />
+      <workItem from="1617674498486" duration="858000" />
+      <workItem from="1617683983939" duration="1302000" />
+      <workItem from="1617772885314" duration="1748000" />
     </task>
     <task id="LOCAL-00001" summary="权限模块开发">
       <created>1616673568997</created>
@@ -254,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617189550100</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="打卡模块完成">
+      <created>1617349408111</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1617349408111</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +250,9 @@
     <MESSAGE value="个人信息修改" />
     <MESSAGE value="打卡。。" />
     <MESSAGE value="打卡。。." />
-    <option name="LAST_COMMIT_MESSAGE" value="打卡。。." />
+    <MESSAGE value="打卡完成" />
+    <MESSAGE value="打卡模块完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="打卡模块完成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="488" y="134" key="#Project_Structure" timestamp="1616589724587">
@@ -303,46 +275,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="555" y="436" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617169079429" />
-    <state x="1181" y="382" width="440" height="464" key="FileChooserDialogImpl" timestamp="1617345597917">
+    <state x="1181" y="382" width="440" height="464" key="FileChooserDialogImpl" timestamp="1617773002471">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1181" y="382" width="440" height="464" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1617345597917" />
+    <state x="1181" y="382" width="440" height="464" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1617773002471" />
     <state x="765" y="421" key="Github.CreateGistDialog" timestamp="1617347883331">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="421" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617347883331" />
-    <state width="1877" height="843" key="GridCell.Tab.0.bottom" timestamp="1617349112175">
+    <state width="1877" height="843" key="GridCell.Tab.0.bottom" timestamp="1617775018345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="843" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617349112175" />
-    <state width="1877" height="843" key="GridCell.Tab.0.center" timestamp="1617349112175">
+    <state width="1877" height="843" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617775018345" />
+    <state width="1877" height="843" key="GridCell.Tab.0.center" timestamp="1617775018345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="843" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617349112175" />
-    <state width="1877" height="843" key="GridCell.Tab.0.left" timestamp="1617349112175">
+    <state width="1877" height="843" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617775018345" />
+    <state width="1877" height="843" key="GridCell.Tab.0.left" timestamp="1617775018345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="843" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617349112175" />
-    <state width="1877" height="843" key="GridCell.Tab.0.right" timestamp="1617349112175">
+    <state width="1877" height="843" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617775018345" />
+    <state width="1877" height="843" key="GridCell.Tab.0.right" timestamp="1617775018345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="843" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617349112175" />
-    <state width="1877" height="843" key="GridCell.Tab.1.bottom" timestamp="1617349112176">
+    <state width="1877" height="843" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617775018345" />
+    <state width="1877" height="843" key="GridCell.Tab.1.bottom" timestamp="1617775018346">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="843" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617349112176" />
-    <state width="1877" height="843" key="GridCell.Tab.1.center" timestamp="1617349112175">
+    <state width="1877" height="843" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617775018346" />
+    <state width="1877" height="843" key="GridCell.Tab.1.center" timestamp="1617775018345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="843" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617349112175" />
-    <state width="1877" height="843" key="GridCell.Tab.1.left" timestamp="1617349112175">
+    <state width="1877" height="843" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617775018345" />
+    <state width="1877" height="843" key="GridCell.Tab.1.left" timestamp="1617775018345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="843" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617349112175" />
-    <state width="1877" height="843" key="GridCell.Tab.1.right" timestamp="1617349112176">
+    <state width="1877" height="843" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617775018345" />
+    <state width="1877" height="843" key="GridCell.Tab.1.right" timestamp="1617775018346">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="843" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617349112176" />
+    <state width="1877" height="843" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617775018346" />
     <state width="1877" height="377" key="GridCell.Tab.2.bottom" timestamp="1617189581594">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -371,10 +343,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="278" y="187" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1617009878170" />
-    <state x="801" y="357" key="Vcs.Push.Dialog.v2" timestamp="1617189553194">
+    <state x="801" y="357" key="Vcs.Push.Dialog.v2" timestamp="1617349484332">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="801" y="357" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1617189553194" />
+    <state x="801" y="357" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1617349484332" />
     <state x="762" y="430" width="396" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617264770971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
