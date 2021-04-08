@@ -192,9 +192,16 @@
                     </template>
                   </el-table-column>
                   <el-table-column
-                    prop="signOut"
-                    label="签到时间"
+                    label="签退时间"
                     width="150">
+                    <template slot-scope="scope">
+                      <div v-if="scope.row.signOut===null">
+                        没有签退
+                      </div>
+                      <div v-if="scope.row.signOut!=null">
+                        {{ scope.row.signOut }}
+                      </div>
+                    </template>
                   </el-table-column>
                   <el-table-column
                     label="签退图片"
